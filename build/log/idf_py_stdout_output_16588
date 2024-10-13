@@ -1,0 +1,76 @@
+[1/5] cmd.exe /C "cd /D "C:\Users\joshk\Documents\Arduino\Block Lights\BlockLights_Slave\build\esp-idf\esptool_py" && C:\Users\joshk\.espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Users/joshk/esp/v5.3.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/partition_table/partition-table.bin" "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/BlockLights_Slave.bin""
+BlockLights_Slave.bin binary size 0xf9640 bytes. Smallest app partition is 0x600000 bytes. 0x5069c0 bytes (84%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D "C:\Users\joshk\Documents\Arduino\Block Lights\BlockLights_Slave\build\bootloader\esp-idf\esptool_py" && C:\Users\joshk\.espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Users/joshk/esp/v5.3.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.bin""
+Bootloader binary size 0x5460 bytes. 0x2ba0 bytes (34%) free.
+[2/3] cmd.exe /C "cd /D C:\Users\joshk\esp\v5.3.1\esp-idf\components\esptool_py && C:\Users\joshk\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/joshk/esp/v5.3.1/esp-idf -D SERIAL_TOOL=C:/Users/joshk/.espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/Users/joshk/esp/v5.3.1/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c6 -D SERIAL_TOOL_ARGS=--esptool.py --chip esp32c6 -p COM7 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader/bootloader.bin 0x10000 BlockLights_Slave.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM7
+Connecting...
+Chip is ESP32-C6 (QFN40) (revision v0.1)
+Features: WiFi 6, BT 5, IEEE802.15.4
+Crystal is 40MHz
+MAC: f0:f5:bd:ff:fe:0d:c5:b8
+BASE MAC: f0:f5:bd:0d:c5:b8
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00109fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21600 bytes to 12984...
+Writing at 0x00000000... (100 %)
+Wrote 21600 bytes (12984 compressed) at 0x00000000 in 0.3 seconds (effective 524.0 kbit/s)...
+Hash of data verified.
+Compressed 1021504 bytes to 588461...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001e0ea... (5 %)
+Writing at 0x0002967d... (8 %)
+Writing at 0x0002ead5... (11 %)
+Writing at 0x00034e40... (13 %)
+Writing at 0x0003d8ac... (16 %)
+Writing at 0x0004410e... (19 %)
+Writing at 0x0004c00e... (22 %)
+Writing at 0x000534b0... (25 %)
+Writing at 0x0005a694... (27 %)
+Writing at 0x0006171e... (30 %)
+Writing at 0x000690cc... (33 %)
+Writing at 0x0006fd28... (36 %)
+Writing at 0x00076d3d... (38 %)
+Writing at 0x0007ddf8... (41 %)
+Writing at 0x00084f4d... (44 %)
+Writing at 0x0008b90c... (47 %)
+Writing at 0x000919f7... (50 %)
+Writing at 0x00097e70... (52 %)
+Writing at 0x0009e59f... (55 %)
+Writing at 0x000a5479... (58 %)
+Writing at 0x000ab3fb... (61 %)
+Writing at 0x000b1d9c... (63 %)
+Writing at 0x000b80ed... (66 %)
+Writing at 0x000bdc8d... (69 %)
+Writing at 0x000c3ee1... (72 %)
+Writing at 0x000c9dda... (75 %)
+Writing at 0x000d0085... (77 %)
+Writing at 0x000d6032... (80 %)
+Writing at 0x000dbfbf... (83 %)
+Writing at 0x000e21e4... (86 %)
+Writing at 0x000e88a3... (88 %)
+Writing at 0x000ee920... (91 %)
+Writing at 0x000f5985... (94 %)
+Writing at 0x000fc158... (97 %)
+Writing at 0x00101c05... (100 %)
+Wrote 1021504 bytes (588461 compressed) at 0x00010000 in 5.7 seconds (effective 1439.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 104...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (104 compressed) at 0x00008000 in 0.0 seconds (effective 523.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build" -P C:/Users/joshk/esp/v5.3.1/esp-idf/components/esptool_py/run_serial_tool.cmake"
