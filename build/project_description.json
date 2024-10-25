@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "BlockLights_Slave",
-    "project_version":    "1",
+    "project_version":    "a48ea72-dirty",
     "project_path":       "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave",
     "idf_path":           "C:/Users/joshk/esp/v5.3.1/esp-idf",
     "build_dir":          "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build",
@@ -1566,9 +1566,9 @@
             "type": "LIBRARY",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "espressif__arduino-esp32", "espressif__esp_websocket_client" ],
+            "priv_reqs": [ "espressif__arduino-esp32", "espressif__esp_websocket_client", "joltwallet__littlefs" ],
             "managed_reqs": [],
-            "managed_priv_reqs": [ "espressif__arduino-esp32", "espressif__esp_websocket_client" ],
+            "managed_priv_reqs": [ "espressif__arduino-esp32", "espressif__esp_websocket_client", "joltwallet__littlefs" ],
             "file": "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/libmain.a",
             "sources": [ "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/main/main.cpp" ],
             "include_dirs": [ "." ]
@@ -3163,9 +3163,9 @@
             "dir": "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/main",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "espressif__arduino-esp32", "espressif__esp_websocket_client" ],
+            "priv_reqs": [ "espressif__arduino-esp32", "espressif__esp_websocket_client", "joltwallet__littlefs" ],
             "managed_reqs": [],
-            "managed_priv_reqs": [ "espressif__arduino-esp32", "espressif__esp_websocket_client" ],
+            "managed_priv_reqs": [ "espressif__arduino-esp32", "espressif__esp_websocket_client", "joltwallet__littlefs" ],
             "include_dirs": [ "." ]
         },
         "chmorgan__esp-libhelix-mp3": {

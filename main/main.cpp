@@ -1,15 +1,19 @@
-#include <stdio.h>
 #include <WiFi.h>
 #include <FastLED.h>
 #include <esp_now.h>
-#include <SPIFFS.h>
-#include <nvs_flash.h>
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "esp_wifi.h"
+//#include <SPIFFS.h>
+
+#include "esp_littlefs.h"
+#include "esp_err.h"
+#include "esp_log.h"
+
+#include <nvs_flash.h> // needed for wifi setup
+#include "esp_wifi.h" // for changing the wifi channel to 11
 
 #define NUM_LEDS 1
 #define DATA_PIN 8
+
+static const char *TAG = "BlockLights Slave";
 
 CRGB leds[NUM_LEDS];
 
@@ -25,15 +29,6 @@ typedef struct Message {
     CRGB colour;    // RGB values (for LED color change)
     int number;    // slave block number
 } Message;
-
-
-// Task function to continuously run
-void espNowTask(void *pvParameters) {
-    while (true) {
-        // You can add any periodic non-blocking code here if needed
-        vTaskDelay(pdMS_TO_TICKS(1000)); // Optional delay to prevent busy waiting
-    }
-}
 
 void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
     Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success" : "Delivery Fail");
@@ -53,16 +48,42 @@ void addPeer(uint8_t* peerMAC) {
     }
 }
 
-void writeBlockNumberToSPIFFS(int newBlockNumber) {
-    File file = SPIFFS.open("/blockNumber.txt", FILE_WRITE);
+void writeBlockNumberToLittleFS(int newBlockNumber) {
+    // Write to the file (overwriting previous content)
+    FILE *file = fopen("/partition/blockNumber.txt", "w");
     if (!file) {
         Serial.println("Failed to open file for writing");
         return;
     }
 
     // Write the new value to the file
-    file.print(newBlockNumber);
-    file.close();
+    fprintf(file, "%d", newBlockNumber);
+    fclose(file);
+    Serial.println("Block number written to LittleFS");
+}
+
+void readBlockNumberFromLittleFS() {
+    FILE *file = fopen("/partition/blockNumber.txt", "r");
+    if (!file) {
+        Serial.println("Failed to open file for reading, initializing value to 0");
+        blockNumber = 0; // Initialize to a default value if file is not found
+        return;
+    }
+
+    // Read a line from the file (enough for two digits and a null terminator)
+    char buffer[3];  // Buffer to hold the number (2 digits + null terminator)
+    if (fgets(buffer, sizeof(buffer), file) == NULL) {
+        printf("Error reading from file or file is empty.\n");
+        fclose(file);
+        return;
+    }
+    fclose(file);
+
+    // Convert the string to an integer
+    blockNumber = atoi(buffer);  // Convert from string to int
+
+    Serial.print("Block number read from LittleFS: ");
+    Serial.println(blockNumber);
 }
 
 // Callback when ESP-NOW message is received
@@ -111,7 +132,7 @@ void OnDataRecv(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, in
             break;
         case 2: // block number update
             blockNumber = receivedMessage.number;
-            writeBlockNumberToSPIFFS(blockNumber);
+            writeBlockNumberToLittleFS(blockNumber);
             Serial.println("Updated block number");
             break;
         default:
@@ -155,35 +176,42 @@ void setupWiFi() {
 
 }
 
-void readBlockNumberFromSPIFFS() {
-    File file = SPIFFS.open("/blockNumber.txt", FILE_READ);
-    if (!file) {
-        Serial.println("Failed to open file for reading, initializing value to 0");
-        return;
-    }
-
-    // Read the value from file
-    String blockNumberStr = file.readString();
-    blockNumber = blockNumberStr.toInt();
-    file.close();
-}
-
-
 extern "C" void app_main(void) {
     //esp_log_level_set("*", ESP_LOG_ERROR);  // Set all log levels to error  WARNING setting all logs to just error BREAKS FASTLED (3.8 prerelease)  
 
-    
-
     Serial.begin(115200); // Initialize Serial communication
-    //delay(5000); // 5 seconds to let you open the COM port if you need
+    delay(5000); // 5 seconds to let you open the COM port if you need
 
-    // Initialize SPIFFS
-    if (!SPIFFS.begin(true)) {
-        Serial.println("SPIFFS initialization failed!");
+    esp_vfs_littlefs_conf_t conf = {
+            .base_path = "/partition",
+            .partition_label = "storage",
+            .format_if_mount_failed = true,
+            .dont_mount = false,
+        };
+
+    // Use settings defined above to initialize and mount LittleFS filesystem.
+    // Note: esp_vfs_littlefs_register is an all-in-one convenience function.
+    esp_err_t ret = esp_vfs_littlefs_register(&conf);
+
+    if (ret != ESP_OK) {
+        if (ret == ESP_FAIL)
+        {
+                ESP_LOGE(TAG, "Failed to mount or format filesystem");
+        }
+        else if (ret == ESP_ERR_NOT_FOUND)
+        {
+                ESP_LOGE(TAG, "Failed to find LittleFS partition");
+        }
+        else
+        {
+                ESP_LOGE(TAG, "Failed to initialize LittleFS (%s)", esp_err_to_name(ret));
+        }
         return;
+    } else {
+        printf("LittleFS initialised...\n");
     }
 
-    readBlockNumberFromSPIFFS();
+    readBlockNumberFromLittleFS();
 
     // Setup Wi-Fi and LED control
     printf("\nInitialising......\n");
@@ -194,9 +222,6 @@ extern "C" void app_main(void) {
     Serial.println(slaveMacAddressString);
 
     FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);  // Initialize FastLED
-    
-    // Create a FreeRTOS task for handling ESP-NOW communication
-    xTaskCreate(espNowTask, "ESP-NOW Task", 2048, NULL, 1, NULL);
 }
 
 

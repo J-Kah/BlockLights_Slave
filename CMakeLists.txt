@@ -11,8 +11,3 @@ add_definitions(
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(BlockLights_Slave)
-
-
-
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Os")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Os")

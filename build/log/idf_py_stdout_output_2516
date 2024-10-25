@@ -1,0 +1,30 @@
+[1/10] cmd.exe /C "cd /D "C:\Users\joshk\Documents\Arduino\Block Lights\BlockLights_Slave\build\esp-idf\main" && C:\Users\joshk\.espressif\tools\cmake\3.24.0\bin\cmake.exe -E echo "Failed to create SPIFFS image for partition 'storage'. " "Check project configuration if using the correct partition table file." && C:\Users\joshk\.espressif\tools\cmake\3.24.0\bin\cmake.exe -E remove "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/OnfT3.cmake" && C:\Users\joshk\.espressif\tools\cmake\3.24.0\bin\cmake.exe -E env "FAIL_MESSAGE=Failing the build (see errors on lines above)" C:/Users/joshk/.espressif/tools/cmake/3.24.0/bin/cmake.exe -P C:/Users/joshk/esp/v5.3.1/esp-idf/tools/cmake/scripts/fail.cmake"
+FAILED: esp-idf/main/CMakeFiles/spiffs_storage_bin C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/spiffs_storage_bin 
+cmd.exe /C "cd /D "C:\Users\joshk\Documents\Arduino\Block Lights\BlockLights_Slave\build\esp-idf\main" && C:\Users\joshk\.espressif\tools\cmake\3.24.0\bin\cmake.exe -E echo "Failed to create SPIFFS image for partition 'storage'. " "Check project configuration if using the correct partition table file." && C:\Users\joshk\.espressif\tools\cmake\3.24.0\bin\cmake.exe -E remove "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/OnfT3.cmake" && C:\Users\joshk\.espressif\tools\cmake\3.24.0\bin\cmake.exe -E env "FAIL_MESSAGE=Failing the build (see errors on lines above)" C:/Users/joshk/.espressif/tools/cmake/3.24.0/bin/cmake.exe -P C:/Users/joshk/esp/v5.3.1/esp-idf/tools/cmake/scripts/fail.cmake"
+Failed to create SPIFFS image for partition 'storage'.  Check project configuration if using the correct partition table file.
+CMake Error at C:/Users/joshk/esp/v5.3.1/esp-idf/tools/cmake/scripts/fail.cmake:3 (message):
+  Failing the build (see errors on lines above)
+
+
+[2/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D "C:\Users\joshk\Documents\Arduino\Block Lights\BlockLights_Slave\build\bootloader\esp-idf\esptool_py" && C:\Users\joshk\.espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Users/joshk/esp/v5.3.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.bin""
+Bootloader binary size 0x5460 bytes. 0x2ba0 bytes (34%) free.
+[3/8] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj
+In file included from C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__arduino-esp32/libraries/FastLED/src/platforms/esp/32/fastled_esp32.h:3,
+                 from C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__arduino-esp32/libraries/FastLED/src/platforms.h:42,
+                 from C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__arduino-esp32/libraries/FastLED/src/FastLED.h:68,
+                 from C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/main/main.cpp:2:
+C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__arduino-esp32/libraries/FastLED/src/platforms/esp/32/fastpin_esp32.h:117:2: warning: #warning Unknown ESP32 chip variant. Only pins defined by ESP-IDF will be masked. [-Wcpp]
+  117 | #warning Unknown ESP32 chip variant.  Only pins defined by ESP-IDF will be masked.
+      |  ^~~~~~~
+In file included from C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__arduino-esp32/libraries/FastLED/src/lib8tion/scale8.h:5,
+                 from C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__arduino-esp32/libraries/FastLED/src/lib8tion/math8.h:4,
+                 from C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__arduino-esp32/libraries/FastLED/src/lib8tion.h:380,
+                 from C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__arduino-esp32/libraries/FastLED/src/pixeltypes.h:7,
+                 from C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__arduino-esp32/libraries/FastLED/src/cpixel_ledcontroller.h:8,
+                 from C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__arduino-esp32/libraries/FastLED/src/controller.h:7,
+                 from C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__arduino-esp32/libraries/FastLED/src/FastLED.h:63:
+C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__arduino-esp32/libraries/FastLED/src/crgb.h:332:61: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+  332 |     FASTLED_FORCE_INLINE explicit operator const uint32_t() const
+      |                                                             ^~~~~
+ninja: build stopped: subcommand failed.

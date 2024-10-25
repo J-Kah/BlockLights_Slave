@@ -1,0 +1,7 @@
+ESP Insights Project commit: a48ea72-dirty
+ESP RainMaker Project commit: a48ea72-dirty
+CMake Error at CMakeLists.txt:37 (partition_table_gen):
+  Unknown CMake command "partition_table_gen".
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

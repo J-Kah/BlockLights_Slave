@@ -6,83 +6,84 @@ dependencies:
       require: private
       version: '>=4.1.0'
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
     version: 1.0.3
   espressif/arduino-esp32:
     component_hash: b5e2bcf46572100779f591fddd13fb6fcc6c48192bd9a269ee928e1572029a31
     dependencies:
     - name: chmorgan/esp-libhelix-mp3
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       require: private
       version: 1.0.3
     - name: espressif/esp-dsp
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       require: private
       rules:
       - if: target != esp32c2
       version: ^1.3.4
     - name: espressif/esp-modbus
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       require: private
       version: ^1.0.15
     - name: espressif/esp-zboss-lib
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       require: private
       rules:
       - if: target != esp32c2
       version: ^1.0.1
     - name: espressif/esp-zigbee-lib
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       require: private
       rules:
       - if: target != esp32c2
       version: ^1.0.1
     - name: espressif/esp_insights
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       require: private
       rules:
       - if: target != esp32c2
       version: ^1.0.1
     - name: espressif/esp_modem
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       require: private
       version: ^1.1.0
     - name: espressif/esp_rainmaker
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       require: private
       rules:
       - if: target != esp32c2
       version: ^1.0.0
     - name: espressif/libsodium
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       require: private
       version: ^1.0.20~1
     - name: espressif/mdns
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       require: private
       version: ^1.2.3
     - name: espressif/network_provisioning
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       require: private
       version: ~1.0.0
     - name: espressif/qrcode
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       require: private
       rules:
       - if: target != esp32c2
       version: ^0.1.0~1
     - name: espressif/rmaker_common
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       require: private
       rules:
       - if: target != esp32c2
       version: ^1.4.3
     - name: idf
+      registry_url: https://components.espressif.com
       require: private
       version: '>=5.3,<5.4'
     - name: joltwallet/littlefs
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       require: private
       version: ^1.10.2
     source:
@@ -115,7 +116,7 @@ dependencies:
       require: private
       version: '>=4.2'
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
     version: 1.5.2
   espressif/esp-modbus:
@@ -125,7 +126,7 @@ dependencies:
       require: private
       version: '>=4.3'
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
     version: 1.0.16
   espressif/esp-serial-flasher:
@@ -142,7 +143,7 @@ dependencies:
       require: private
       version: '>=5.0'
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
     version: 1.5.1
   espressif/esp-zigbee-lib:
@@ -152,7 +153,7 @@ dependencies:
       require: private
       version: '>=5.0'
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
     version: 1.5.1
   espressif/esp_diag_data_store:
@@ -180,7 +181,7 @@ dependencies:
       type: service
     version: 1.2.1
   espressif/esp_insights:
-    component_hash: 5667cd9bbd3a9bcc131409c968c5f03e67ca0437022ef0e4a9d655a222869dd6
+    component_hash: 4015c524b9955528f941268cf080174076b195800de910d061efc46113bc2e0c
     dependencies:
     - name: espressif/cbor
       registry_url: https://components.espressif.com
@@ -191,11 +192,11 @@ dependencies:
     - name: espressif/esp_diag_data_store
       registry_url: https://components.espressif.com
       require: private
-      version: ~1.0
+      version: 1.0.2
     - name: espressif/esp_diagnostics
       registry_url: https://components.espressif.com
       require: private
-      version: '>=1.2.0'
+      version: 1.2.1
     - name: espressif/rmaker_common
       registry_url: https://components.espressif.com
       require: private
@@ -204,9 +205,9 @@ dependencies:
       require: private
       version: '>=4.1'
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
-    version: 1.2.1
+    version: 1.2.2
   espressif/esp_modem:
     component_hash: e48da33fee082dd9d9a97a354a228057e07a14ac108766b40ad84e018205410a
     dependencies:
@@ -214,7 +215,7 @@ dependencies:
       require: private
       version: '>=4.1'
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
     version: 1.1.0
   espressif/esp_rainmaker:
@@ -261,7 +262,7 @@ dependencies:
       require: private
       version: ~1.4.6
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
     version: 1.5.0
   espressif/esp_rcp_update:
@@ -290,7 +291,7 @@ dependencies:
       type: service
     version: 1.2.0
   espressif/esp_secure_cert_mgr:
-    component_hash: a20007d67e65a000670ab77e45d7554c943eb8dcb0abeada0a57dd9adac3a703
+    component_hash: 5d9175b416f751ba6a7cb35bdf092f0af85658ce06c4a592c7c541d8017ebeb9
     dependencies:
     - name: idf
       require: private
@@ -298,7 +299,7 @@ dependencies:
     source:
       registry_url: https://components.espressif.com/
       type: service
-    version: 2.4.1
+    version: 2.5.0
   espressif/esp_websocket_client:
     component_hash: ae561d39222a399ddda5e470913c3d54a3c0f53dce15b8d21a3aaa4226dd74b1
     dependencies:
@@ -346,7 +347,7 @@ dependencies:
       require: private
       version: '>=4.2'
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
     version: 1.0.20~1
   espressif/mdns:
@@ -356,7 +357,7 @@ dependencies:
       require: private
       version: '>=5.0'
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
     version: 1.4.0
   espressif/network_provisioning:
@@ -366,21 +367,21 @@ dependencies:
       require: private
       version: '>=5.1'
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
     version: 1.0.2
   espressif/qrcode:
     component_hash: 3b493771bc5d6ad30cbf87c25bf784aada8a08c941504355b55d6b75518ed7bc
     dependencies: []
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
     version: 0.1.0~2
   espressif/rmaker_common:
     component_hash: a3a1df881278d0351fc850b77792fe8a196ddd6dcacbea203d606329cc6a0239
     dependencies: []
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
     version: 1.4.6
   idf:
@@ -401,6 +402,7 @@ direct_dependencies:
 - espressif/arduino-esp32
 - espressif/esp_websocket_client
 - idf
-manifest_hash: f2620a599f9749b2275aaf5c99ecb52db33aaf190de9f0f835f25fe27b4314d5
+- joltwallet/littlefs
+manifest_hash: 243bdf09fa7499247393cb4001465ea06962ce848770caa53163d0a514ea0f3a
 target: esp32c6
 version: 2.0.0

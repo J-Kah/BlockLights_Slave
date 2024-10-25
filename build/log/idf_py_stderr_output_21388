@@ -1,0 +1,9 @@
+ESP Insights Project commit: a48ea72-dirty
+ESP RainMaker Project commit: a48ea72-dirty
+CMake Error at C:/Users/joshk/esp/v5.3.1/esp-idf/tools/cmake/component.cmake:440 (message):
+  Called idf_component_register from a non-component directory.
+Call Stack (most recent call first):
+  CMakeLists.txt:27 (idf_component_register)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed
