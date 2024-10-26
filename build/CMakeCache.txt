@@ -319,6 +319,15 @@ ENABLE_TESTING:BOOL=
 //No help, variable specified on the command line.
 ESP_PLATFORM:UNINITIALIZED=1
 
+//Value Computed by CMake
+FastLED_BINARY_DIR:STATIC=C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/FastLED
+
+//Value Computed by CMake
+FastLED_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+FastLED_SOURCE_DIR:STATIC=C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/components/FastLED
+
 //Generate the auto-generated files as needed
 GEN_FILES:BOOL=
 

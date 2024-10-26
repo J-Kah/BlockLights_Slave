@@ -977,13 +977,6 @@ C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/es
 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/espressif__arduino-esp32/CMakeFiles/install.dir
 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/espressif__arduino-esp32/CMakeFiles/install/local.dir
 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/espressif__arduino-esp32/CMakeFiles/install/strip.dir
-C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/espressif__esp_websocket_client/CMakeFiles/__idf_espressif__esp_websocket_client.dir
-C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/espressif__esp_websocket_client/CMakeFiles/edit_cache.dir
-C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/espressif__esp_websocket_client/CMakeFiles/rebuild_cache.dir
-C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/espressif__esp_websocket_client/CMakeFiles/list_install_components.dir
-C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/espressif__esp_websocket_client/CMakeFiles/install.dir
-C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/espressif__esp_websocket_client/CMakeFiles/install/local.dir
-C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/espressif__esp_websocket_client/CMakeFiles/install/strip.dir
 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/__idf_main.dir
 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/littlefs_storage_bin.dir
 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/storage-flash.dir
@@ -994,3 +987,10 @@ C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/ma
 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/install.dir
 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/install/local.dir
 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/install/strip.dir
+C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/FastLED/CMakeFiles/__idf_FastLED.dir
+C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/FastLED/CMakeFiles/edit_cache.dir
+C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/FastLED/CMakeFiles/rebuild_cache.dir
+C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/FastLED/CMakeFiles/list_install_components.dir
+C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/FastLED/CMakeFiles/install.dir
+C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/FastLED/CMakeFiles/install/local.dir
+C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/FastLED/CMakeFiles/install/strip.dir

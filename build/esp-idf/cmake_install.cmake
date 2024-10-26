@@ -659,11 +659,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/espressif__esp_websocket_client/cmake_install.cmake")
+  include("C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/cmake_install.cmake")
+  include("C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/FastLED/cmake_install.cmake")
 endif()
 

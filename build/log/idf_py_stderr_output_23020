@@ -1,0 +1,7 @@
+ESP Insights Project commit: HEAD-HASH-NOTFOUND
+ESP RainMaker Project commit: HEAD-HASH-NOTFOUND
+CMake Error at managed_components/espressif__arduino-esp32/CMakeLists.txt:311 (message):
+  esp32-arduino requires CONFIG_FREERTOS_HZ=1000 (currently 100)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

@@ -102,5 +102,5 @@ C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/es
 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/espressif__qrcode/libespressif__qrcode.a
 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/joltwallet__littlefs/libjoltwallet__littlefs.a
 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/espressif__arduino-esp32/libespressif__arduino-esp32.a
-C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/espressif__esp_websocket_client/libespressif__esp_websocket_client.a
 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/libmain.a
+C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/FastLED/libFastLED.a

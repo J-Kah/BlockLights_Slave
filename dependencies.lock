@@ -300,16 +300,6 @@ dependencies:
       registry_url: https://components.espressif.com/
       type: service
     version: 2.5.0
-  espressif/esp_websocket_client:
-    component_hash: ae561d39222a399ddda5e470913c3d54a3c0f53dce15b8d21a3aaa4226dd74b1
-    dependencies:
-    - name: idf
-      require: private
-      version: '>=5.0'
-    source:
-      registry_url: https://components.espressif.com/
-      type: service
-    version: 1.2.3
   espressif/jsmn:
     component_hash: d80350c41bbaa827c98a25b6072df00884e72f54885996fab4a4f0aebce6b6c3
     dependencies:
@@ -400,9 +390,8 @@ dependencies:
     version: 1.14.8
 direct_dependencies:
 - espressif/arduino-esp32
-- espressif/esp_websocket_client
 - idf
 - joltwallet/littlefs
-manifest_hash: 243bdf09fa7499247393cb4001465ea06962ce848770caa53163d0a514ea0f3a
+manifest_hash: 63486c6cc0e5e2df15803d2385870de94b12cf056b412648acf79fe3c093f651
 target: esp32c6
 version: 2.0.0
