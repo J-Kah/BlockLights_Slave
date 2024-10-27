@@ -151,7 +151,7 @@ void setupWiFi() {
 
     // Set Wi-Fi mode to Station
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
-    
+
     // Disable Wi-Fi power-saving mode to prevent deep sleep (similar to WiFi.setSleep(false))
     ESP_ERROR_CHECK(esp_wifi_set_ps(WIFI_PS_NONE));
 

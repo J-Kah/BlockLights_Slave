@@ -7,11 +7,8 @@
 This is the alpha version of BlockLights Slave code, written in VSCode with the ESP-IDF. For a better overview of the project, see the [Master repository on GitHub](https://github.com/J-Kah/BlockLights_VSCode).
 
 
-## How to use this repository
+## How to setup this code in VSCode
 1. Follow the instructions [here](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md) to set up VSCode and the ESP-IDF environment
-
-
-
 2. To setup the project folder:
     1. In VSCode press ctrl + P to open the quick open feature
     2. enter ">ESP-IDF: Welcome"
@@ -37,22 +34,48 @@ This is the alpha version of BlockLights Slave code, written in VSCode with the 
     2. Using the arrow keys, navigate to and change: menuconfig -> Serial flasher config -> Flash size -> Change to however much flash your ESP32 has (E.g.Beetle ESP32 C6 Mini has 4MB)
     3. Using the arrow keys, navigate to and change: menuconfig -> Partition Table -> Partition Table -> Change to Custom partition table CSV
     4. Using the arrow keys, navigate to and change: menuconfig -> Component config -> Wi-Fi -> WiFi NVS flash (Change it to unchecked)
-8. Add and configure FastLED to components in the project
-    1. In the VSCode project directory, create a folder named "components"
-    2. Download FastLED from [here](https://github.com/FastLED/FastLED) by clicking the green code button, then Download ZIP
-    3. Extract the FastLED folder and move it into the newly created components folder
-    4. Change the FastLED source code to work with ESP-IDF (Don't froget to press ctrl + S to save before closing the files)
-9. Copy project files 
+8. Copy project files 
     1. Download the zip from [this GitHub repository](https://github.com/J-Kah/BlockLights_Slave) (green code button -> Download ZIP)
     2. Extract the folder somewhere, and copy the following files/ folders into your VSCode project root folder (overwrite if necessary):
         1. /components/ folder and all its contents
         2. /main/ folder and all its contents
         3. /partition/ folder and all its contents
         4. partitions.csv
-    3. Change partitions.csv to suit your ESP's flash storage (E.g. Beetle ESP32 C6 Mini has 4MB)
-        1. Change the last line to "storage,  data, spiffs,  0x310000, 512K,"
-    4. Delete the file /main/main.c
-10. In the ESP-IDF terminal, enter "idf.py flash" (it will take a long time to build for the first time, then it will flash to the ESP32)
+    3. Delete the file /main/main.c
+9. Edit the NUM_LEDS and DATA_PIN values in /main/main.cpp to suit your project
+10. In main.cpp, double check "FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);" includes your LED type and colour order (GRB or RGB)
+11. In the ESP-IDF terminal, enter "idf.py flash" (it will take a long time to build for the first time, then it will flash to the ESP32)
+12. Once flashed, you can monitor the serial by going to the Serial monitor and selecting your COM port & Baud rate -> Start Monitoring.
+
+## Known issues
+1. FastLED does not work in DMA mode with the ESP32 C6. It resorts to bit-banging the GPIO pin to send data, which triggers ESP info logs that pollute the serial monitor. It still works but it's annoying.
+2. Setting the GPIO Log level to anything but INFO messes with the data being bit-banged to the LEDs which results in incorrect colours being displayed, so that's not viable.
+
+## Future improvements
+1. Maybe implement error handling for ESP-NOW between Master and Slave
+
+## Folder contents
+
+The project **BlockLights Slave** contains one source file in CPP language [main.cpp](main/main.cpp). The file is located in folder [main](main).
+
+ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
+files that provide set of directives and instructions describing the project's source files and targets
+(executable, library, or both). 
+
+Below is short explanation of remaining files in the project folder.
+
+```
+├── components
+│   └── FastLED                 This is the modified FastLED library
+├── CMakeLists.txt              This is the build configuration for the whole project
+├── main
+│   ├── CMakeLists.txt          This is the build configuration for the /main/ folder.  Command to flash /partitions/ folder with the code inside
+│   └── main.cpp                This is the main code
+├── partition                   
+│   └── blockNumber.txt         This is the file accessed by main.cpp to save (read & write) the block number
+├── partitions.csv              This is the csv file that tells the compiler how to partition the ESP32's flash memory
+└── README.md                   This is the file you are currently reading
+```
 
 ## List of manual changes to source code (Not needed if you downloaded the project files from this repository):
 1. FastLED
@@ -77,26 +100,3 @@ This is the alpha version of BlockLights Slave code, written in VSCode with the 
     
 
     5. In /components/FastLED/src/platforms/esp/32/led_strip/defs.h, change line 30 from "#define FASTLED_RMT_WITH_DMA 1" to "#define FASTLED_RMT_WITH_DMA 0"
-
-## Example folder contents
-
-The project **BlockLights Slave** contains one source file in CPP language [main.cpp](main/main.cpp). The file is located in folder [main](main).
-
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
-files that provide set of directives and instructions describing the project's source files and targets
-(executable, library, or both). 
-
-Below is short explanation of remaining files in the project folder.
-
-```
-├── components
-│   └── FastLED                 This is the modified FastLED library
-├── CMakeLists.txt              This is the build configuration for the whole project
-├── main
-│   ├── CMakeLists.txt          This is the build configuration for the /main/ folder.  Command to flash /partitions/ folder with the code inside
-│   └── main.cpp                This is the main code
-├── partition                   
-│   └── blockNumber.txt         This is the file accessed by main.cpp to save (read & write) the block number
-├── partitions.csv              This is the csv file that tells the compiler how to partition the ESP32's flash memory
-└── README.md                   This is the file you are currently reading
-```

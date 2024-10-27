@@ -1,157 +1,151 @@
-ESP-ROM:esp32c6-20220919
-Build:Sep 19 2022
-rst:0x15 (USB_UART_HPSYS),boot:0xf (SPI_FAST_FLASH_BOOT)
-Saved PC:0x40022eea
-SPIWP:0xee
-mode:DIO, clock div:2
-load:0x40875720,len:0x1804
-load:0x4086c110,len:0xe2c
-load:0x4086e610,len:0x2e58
-entry 0x4086c11a
-[0;32mI (23) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
-[0;32mI (23) boot: compile time Oct 26 2024 11:59:11[0m
-[0;32mI (24) boot: chip revision: v0.1[0m
-[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
-[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
-[0;32mI (35) boot.esp32c6: SPI Flash Size : 8MB[0m
-[0;32mI (40) boot: Enabling RNG early entropy source...[0m
-[0;32mI (45) boot: Partition Table:[0m
-[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00300000[0m
-[0;32mI (79) boot:  3 storage          Unknown data     01 82 00310000 00300000[0m
-[0;32mI (86) boot: End of partition table[0m
-[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=42090020 size=21778h (137080) map[0m
-[0;32mI (127) esp_image: segment 1: paddr=000317a0 vaddr=40800000 size=0e878h ( 59512) load[0m
-[0;32mI (142) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=81e90h (532112) map[0m
-[0;32mI (252) esp_image: segment 3: paddr=000c1eb8 vaddr=4080e878 size=0aa90h ( 43664) load[0m
-[0;32mI (264) esp_image: segment 4: paddr=000cc950 vaddr=40819310 size=03e2ch ( 15916) load[0m
-[0;32mI (274) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (275) boot: Disabling RNG early entropy source...[0m
-[0;32mI (286) cpu_start: Unicore app[0m
-[0;32mI (295) cpu_start: Pro cpu start user code[0m
-[0;32mI (295) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (296) app_init: Application information:[0m
-[0;32mI (298) app_init: Project name:     BlockLights_Slave[0m
-[0;32mI (304) app_init: App version:      1[0m
-[0;32mI (308) app_init: Compile time:     Oct 26 2024 11:58:20[0m
-[0;32mI (314) app_init: ELF file SHA256:  2ab7c1fc6...[0m
-[0;32mI (319) app_init: ESP-IDF:          v5.3.1[0m
-[0;32mI (324) efuse_init: Min chip rev:     v0.0[0m
-[0;32mI (329) efuse_init: Max chip rev:     v0.99 [0m
-[0;32mI (334) efuse_init: Chip rev:         v0.1[0m
-[0;32mI (339) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (346) heap_init: At 40821E80 len 0005A790 (361 KiB): RAM[0m
-[0;32mI (352) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
-[0;32mI (358) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
-[0;32mI (365) spi_flash: detected chip: generic[0m
-[0;32mI (369) spi_flash: flash io: dio[0m
-[0;32mI (373) sleep: Configure to isolate all GPIO pins in sleep state[0m
-[0;32mI (380) sleep: Enable automatic switching of GPIO sleep configuration[0m
-[0;32mI (387) coexist: coex firmware version: 4482466[0m
-[0;32mI (392) coexist: coexist rom version 5b8dcfa[0m
-[0;32mI (398) main_task: Started on CPU0[0m
-[0;32mI (401) main_task: Calling app_main()[0m
-[0;32mI (410) BlockLights Slave: Block number read from LittleFS: 2[0m
-[0;32mI (412) pp: pp rom version: 5b8dcfa[0m
-[0;32mI (416) net80211: net80211 rom version: 5b8dcfa[0m
-[0;32mI (423) wifi:wifi driver task: 40828b1c, prio:23, stack:6656, core=0[0m
-[0;32mI (428) wifi:wifi firmware version: ccaebfa[0m
-[0;32mI (431) wifi:wifi certification version: v7.0[0m
-[0;32mI (435) wifi:config NVS flash: disabled[0m
-[0;32mI (439) wifi:config nano formating: disabled[0m
-[0;32mI (443) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band:0x1[0m
-[0;32mI (449) wifi:Init data frame dynamic rx buffer num: 32[0m
-[0;32mI (454) wifi:Init static rx mgmt buffer num: 5[0m
-[0;32mI (458) wifi:Init management short buffer num: 32[0m
-[0;32mI (462) wifi:Init dynamic tx buffer num: 32[0m
-[0;32mI (466) wifi:Init static tx FG buffer num: 2[0m
-[0;32mI (470) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
-[0;32mI (476) wifi:Init static rx buffer num: 10[0m
-[0;32mI (480) wifi:Init dynamic rx buffer num: 32[0m
-[0;32mI (484) wifi_init: rx ba win: 6[0m
-[0;32mI (488) wifi_init: accept mbox: 6[0m
-[0;32mI (492) wifi_init: tcpip mbox: 32[0m
-[0;32mI (496) wifi_init: udp mbox: 6[0m
-[0;32mI (499) wifi_init: tcp mbox: 6[0m
-[0;32mI (503) wifi_init: tcp tx win: 5760[0m
-[0;32mI (507) wifi_init: tcp rx win: 5760[0m
-[0;32mI (512) wifi_init: tcp mss: 1440[0m
-[0;32mI (515) wifi_init: WiFi IRAM OP enabled[0m
-[0;32mI (520) wifi_init: WiFi RX IRAM OP enabled[0m
-[0;32mI (525) wifi_init: WiFi SLP IRAM OP enabled[0m
-[0;32mI (530) wifi:Set ps type: 0, coexist: 0[0m
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32c6
+NOTICE: Skipping optional dependency: espressif/esp-sr
+NOTICE: Skipping optional dependency: espressif/esp-sr
+Processing 26 dependencies:
+[1/26] chmorgan/esp-libhelix-mp3 (1.0.3)
+[2/26] espressif/arduino-esp32 (3.1.0-rc1)
+[3/26] espressif/cbor (0.6.0~1)
+[4/26] espressif/esp-dsp (1.5.2)
+[5/26] espressif/esp-modbus (1.0.16)
+[6/26] espressif/esp-serial-flasher (0.0.11)
+[7/26] espressif/esp-zboss-lib (1.5.1)
+[8/26] espressif/esp-zigbee-lib (1.5.1)
+[9/26] espressif/esp_diag_data_store (1.0.2)
+[10/26] espressif/esp_diagnostics (1.2.1)
+[11/26] espressif/esp_insights (1.2.2)
+[12/26] espressif/esp_modem (1.1.0)
+[13/26] espressif/esp_rainmaker (1.5.0)
+[14/26] espressif/esp_rcp_update (1.2.0)
+[15/26] espressif/esp_schedule (1.2.0)
+[16/26] espressif/esp_secure_cert_mgr (2.5.0)
+[17/26] espressif/jsmn (1.1.0)
+[18/26] espressif/json_generator (1.1.2)
+[19/26] espressif/json_parser (1.0.3)
+[20/26] espressif/libsodium (1.0.20~1)
+[21/26] espressif/mdns (1.4.0)
+[22/26] espressif/network_provisioning (1.0.2)
+[23/26] espressif/qrcode (0.1.0~2)
+[24/26] espressif/rmaker_common (1.4.6)
+[25/26] joltwallet/littlefs (1.14.8)
+[26/26] idf (5.3.1)
+-- DEBUG: Use esp-modbus component folder: C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp-modbus.
+NOTICE: Skipping optional dependency: espressif/esp-sr
+-- Project sdkconfig file C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/sdkconfig
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/riscv/ld/rom.api.ld
+-- App "BlockLights_Slave" version: 86cbdd6-dirty
+-- Adding linker script C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.ld
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.api.ld
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.rvfp.ld
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.wdt.ld
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.systimer.ld
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.version.ld
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.phy.ld
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.coexist.ld
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.net80211.ld
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.pp.ld
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.newlib.ld
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.newlib-normal.ld
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.heap.ld
+-- Adding linker script C:/Users/joshk/esp/v5.3.1/esp-idf/components/soc/esp32c6/ld/esp32c6.peripherals.ld
+-- DEBUG: Use esp-modbus component folder: C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp-modbus.
+-- Components: FastLED app_trace app_update bootloader bootloader_support bt chmorgan__esp-libhelix-mp3 cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_cam esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_vfs_console esp_wifi espcoredump espressif__arduino-esp32 espressif__cbor espressif__esp-dsp espressif__esp-modbus espressif__esp-serial-flasher espressif__esp-zboss-lib espressif__esp-zigbee-lib espressif__esp_diag_data_store espressif__esp_diagnostics espressif__esp_insights espressif__esp_modem espressif__esp_rainmaker espressif__esp_rcp_update espressif__esp_schedule espressif__esp_secure_cert_mgr espressif__jsmn espressif__json_generator espressif__json_parser espressif__libsodium espressif__mdns espressif__network_provisioning espressif__qrcode espressif__rmaker_common esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 joltwallet__littlefs json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table protobuf-c protocomm pthread riscv sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant
+-- Component paths: C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/components/FastLED C:/Users/joshk/esp/v5.3.1/esp-idf/components/app_trace C:/Users/joshk/esp/v5.3.1/esp-idf/components/app_update C:/Users/joshk/esp/v5.3.1/esp-idf/components/bootloader C:/Users/joshk/esp/v5.3.1/esp-idf/components/bootloader_support C:/Users/joshk/esp/v5.3.1/esp-idf/components/bt C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/chmorgan__esp-libhelix-mp3 C:/Users/joshk/esp/v5.3.1/esp-idf/components/cmock C:/Users/joshk/esp/v5.3.1/esp-idf/components/console C:/Users/joshk/esp/v5.3.1/esp-idf/components/cxx C:/Users/joshk/esp/v5.3.1/esp-idf/components/driver C:/Users/joshk/esp/v5.3.1/esp-idf/components/efuse C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp-tls C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_adc C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_app_format C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_bootloader_format C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_coex C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_common C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_ana_cmpr C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_cam C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_dac C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_gpio C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_gptimer C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_i2c C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_i2s C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_isp C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_jpeg C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_ledc C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_mcpwm C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_parlio C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_pcnt C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_ppa C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_rmt C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_sdio C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_sdm C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_sdmmc C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_sdspi C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_spi C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_touch_sens C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_tsens C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_uart C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_driver_usb_serial_jtag C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_eth C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_event C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_gdbstub C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_hid C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_http_client C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_http_server C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_https_ota C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_https_server C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_hw_support C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_lcd C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_local_ctrl C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_mm C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_netif C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_netif_stack C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_partition C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_phy C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_pm C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_psram C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_ringbuf C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_rom C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_system C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_timer C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_vfs_console C:/Users/joshk/esp/v5.3.1/esp-idf/components/esp_wifi C:/Users/joshk/esp/v5.3.1/esp-idf/components/espcoredump C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__arduino-esp32 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__cbor C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp-dsp C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp-modbus C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp-serial-flasher C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp-zboss-lib C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp-zigbee-lib C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp_diag_data_store C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp_diagnostics C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp_insights C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp_modem C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp_rainmaker C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp_rcp_update C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp_schedule C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__esp_secure_cert_mgr C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__jsmn C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__json_generator C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__json_parser C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__libsodium C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__mdns C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__network_provisioning C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__qrcode C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/espressif__rmaker_common C:/Users/joshk/esp/v5.3.1/esp-idf/components/esptool_py C:/Users/joshk/esp/v5.3.1/esp-idf/components/fatfs C:/Users/joshk/esp/v5.3.1/esp-idf/components/freertos C:/Users/joshk/esp/v5.3.1/esp-idf/components/hal C:/Users/joshk/esp/v5.3.1/esp-idf/components/heap C:/Users/joshk/esp/v5.3.1/esp-idf/components/http_parser C:/Users/joshk/esp/v5.3.1/esp-idf/components/idf_test C:/Users/joshk/esp/v5.3.1/esp-idf/components/ieee802154 C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/managed_components/joltwallet__littlefs C:/Users/joshk/esp/v5.3.1/esp-idf/components/json C:/Users/joshk/esp/v5.3.1/esp-idf/components/log C:/Users/joshk/esp/v5.3.1/esp-idf/components/lwip C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/main C:/Users/joshk/esp/v5.3.1/esp-idf/components/mbedtls C:/Users/joshk/esp/v5.3.1/esp-idf/components/mqtt C:/Users/joshk/esp/v5.3.1/esp-idf/components/newlib C:/Users/joshk/esp/v5.3.1/esp-idf/components/nvs_flash C:/Users/joshk/esp/v5.3.1/esp-idf/components/nvs_sec_provider C:/Users/joshk/esp/v5.3.1/esp-idf/components/openthread C:/Users/joshk/esp/v5.3.1/esp-idf/components/partition_table C:/Users/joshk/esp/v5.3.1/esp-idf/components/protobuf-c C:/Users/joshk/esp/v5.3.1/esp-idf/components/protocomm C:/Users/joshk/esp/v5.3.1/esp-idf/components/pthread C:/Users/joshk/esp/v5.3.1/esp-idf/components/riscv C:/Users/joshk/esp/v5.3.1/esp-idf/components/sdmmc C:/Users/joshk/esp/v5.3.1/esp-idf/components/soc C:/Users/joshk/esp/v5.3.1/esp-idf/components/spi_flash C:/Users/joshk/esp/v5.3.1/esp-idf/components/spiffs C:/Users/joshk/esp/v5.3.1/esp-idf/components/tcp_transport C:/Users/joshk/esp/v5.3.1/esp-idf/components/ulp C:/Users/joshk/esp/v5.3.1/esp-idf/components/unity C:/Users/joshk/esp/v5.3.1/esp-idf/components/usb C:/Users/joshk/esp/v5.3.1/esp-idf/components/vfs C:/Users/joshk/esp/v5.3.1/esp-idf/components/wear_levelling C:/Users/joshk/esp/v5.3.1/esp-idf/components/wifi_provisioning C:/Users/joshk/esp/v5.3.1/esp-idf/components/wpa_supplicant
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build
+[0/1] Re-running CMake...
+[1/7] Generating ../../partition_table/partition-table.bin
+Partition table binary generated. Contents:
+*******************************************************************************
+# ESP-IDF Partition Table
+# Name, Type, SubType, Offset, Size, Flags
+nvs,data,nvs,0x9000,24K,
+phy_init,data,phy,0xf000,4K,
+factory,app,factory,0x10000,2M,
+storage,data,spiffs,0x310000,1536K,
+*******************************************************************************
+[2/7] cmd.exe /C "cd /D "C:\Users\joshk\Documents\Arduino\Block Lights\BlockLights_Slave\build\esp-idf\main" && "C:\Users\joshk\Documents\Arduino\Block Lights\BlockLights_Slave\build\littlefs_py_venv\Scripts\littlefs-python.exe" create "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/partition" "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/storage.bin" -v --fs-size=0x180000 --name-max=64 --block-size=4096"
+LittleFS Configuration:
+  Block Size:       4096  /  0x1000
+  Image Size:    1572864  /  0x180000
+  Block Count:       384
+  Name Max:           64
+  Image:       C:\Users\joshk\Documents\Arduino\Block Lights\BlockLights_Slave\build\storage.bin
+Adding File:      blockNumber.txt
+[3/7] cmd.exe /C "cd /D "C:\Users\joshk\Documents\Arduino\Block Lights\BlockLights_Slave\build\esp-idf\esptool_py" && C:\Users\joshk\.espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Users/joshk/esp/v5.3.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/partition_table/partition-table.bin" "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/BlockLights_Slave.bin""
+BlockLights_Slave.bin binary size 0xc0700 bytes. Smallest app partition is 0x200000 bytes. 0x13f900 bytes (62%) free.
+[4/7] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D "C:\Users\joshk\Documents\Arduino\Block Lights\BlockLights_Slave\build\bootloader\esp-idf\esptool_py" && C:\Users\joshk\.espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Users/joshk/esp/v5.3.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 "C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.bin""
+Bootloader binary size 0x54e0 bytes. 0x2b20 bytes (34%) free.
+[4/5] cmd.exe /C "cd /D C:\Users\joshk\esp\v5.3.1\esp-idf\components\esptool_py && C:\Users\joshk\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/joshk/esp/v5.3.1/esp-idf -D esptool.py --chip esp32c6 -p COM8 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader/bootloader.bin 0x10000 BlockLights_Slave.bin 0x8000 partition_table/partition-table.bin 0x310000 storage.bin
+esptool.py v4.8.1
+Serial port COM8
+Connecting...
+Chip is ESP32-C6 (QFN40) (revision v0.1)
+Features: WiFi 6, BT 5, IEEE802.15.4
+Crystal is 40MHz
+MAC: f0:f5:bd:ff:fe:0e:5d:40
+BASE MAC: f0:f5:bd:0e:5d:40
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000d0fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00310000 to 0x0048ffff...
+SHA digest in image updated
+Compressed 21728 bytes to 13104...
+Writing at 0x00000000... (100 %)
+Wrote 21728 bytes (13104 compressed) at 0x00000000 in 0.3 seconds (effective 514.8 kbit/s)...
+Hash of data verified.
+Compressed 788224 bytes to 466839...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001cb30... (6 %)
+Writing at 0x000244cc... (10 %)
+Writing at 0x0002932f... (13 %)
+Writing at 0x00032a9a... (17 %)
+Writing at 0x000390c2... (20 %)
+Writing at 0x0003fcf0... (24 %)
+Writing at 0x00047056... (27 %)
+Writing at 0x0004e5ac... (31 %)
+Writing at 0x00054eee... (34 %)
+Writing at 0x0005c1b8... (37 %)
+Writing at 0x000630c3... (41 %)
+Writing at 0x00069199... (44 %)
+Writing at 0x0006f85a... (48 %)
+Writing at 0x0007677f... (51 %)
+Writing at 0x0007c957... (55 %)
+Writing at 0x00082560... (58 %)
+Writing at 0x000886b4... (62 %)
+Writing at 0x0008e785... (65 %)
+Writing at 0x000948c2... (68 %)
+Writing at 0x0009a9fa... (72 %)
+Writing at 0x000a07b4... (75 %)
+Writing at 0x000a6cfc... (79 %)
+Writing at 0x000ace3f... (82 %)
+Writing at 0x000b3148... (86 %)
+Writing at 0x000b975b... (89 %)
+Writing at 0x000bf5e9... (93 %)
+Writing at 0x000c58a5... (96 %)
+Writing at 0x000cb5f4... (100 %)
+Wrote 788224 bytes (466839 compressed) at 0x00010000 in 4.5 seconds (effective 1410.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 120...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (120 compressed) at 0x00008000 in 0.0 seconds (effective 531.1 kbit/s)...
+Hash of data verified.
+Compressed 1572864 bytes to 1699...
+Writing at 0x00310000... (100 %)
+Wrote 1572864 bytes (1699 compressed) at 0x00310000 in 2.4 seconds (effective 5173.4 kbit/s)...
+Hash of data verified.
 
-[0;32mI (533) phy_init: phy_version 310,dde1ba9,Jun  4 2024,16:38:11[0m
-[0;31mE (540) phy_init: esp_phy_load_cal_data_from_nvs: NVS has not been initialized. Call nvs_flash_init before starting WiFi/BT.[0m
-[0;33mW (552) phy_init: failed to load RF calibration data (0x1101), falling back to full calibration[0m
-[0;33mW (608) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
-[1;31mE (608) wifi:failed to post WiFi event=43 ret=259[0m
-[0;33mW (610) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
-[0;33mW (618) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
-[0;33mW (626) wifi:(agc)0x600a7128:0xd20179c4, min.avgNF:0xce->0xd2(dB), RCalCount:0x16, min.RRssi:0x9c4(-99.75)[0m
-[0;33mW (636) wifi:(TB)WDEV_PWR_TB_MCS0:19[0m
-[0;33mW (639) wifi:(TB)WDEV_PWR_TB_MCS1:19[0m
-[0;33mW (642) wifi:(TB)WDEV_PWR_TB_MCS2:19[0m
-[0;33mW (645) wifi:(TB)WDEV_PWR_TB_MCS3:19[0m
-[0;33mW (648) wifi:(TB)WDEV_PWR_TB_MCS4:19[0m
-[0;33mW (652) wifi:(TB)WDEV_PWR_TB_MCS5:19[0m
-[0;33mW (655) wifi:(TB)WDEV_PWR_TB_MCS6:18[0m
-[0;33mW (658) wifi:(TB)WDEV_PWR_TB_MCS7:18[0m
-[0;33mW (662) wifi:(TB)WDEV_PWR_TB_MCS8:17[0m
-[0;33mW (665) wifi:(TB)WDEV_PWR_TB_MCS9:15[0m
-[0;33mW (668) wifi:(TB)WDEV_PWR_TB_MCS10:15[0m
-[0;33mW (672) wifi:(TB)WDEV_PWR_TB_MCS11:15[0m
-[0;32mI (675) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
-
-[0;33mW (682) wifi:(he)attach, station, phymode:11ax[0m
-[0;32mI (686) wifi:mode : sta (f0:f5:bd:0e:5d:40)[0m
-[0;32mI (690) wifi:enable tsf[0m
-[1;31mE (692) wifi:failed to post WiFi event=2 ret=259[0m
-[1;31mE (697) wifi:failed to post WiFi event=43 ret=259[0m
-[0;32mI (1701) ESPNOW: espnow [version: 1.0] init[0m
-[0;32mI (1702) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (1703) BlockLights Slave: hi[0m
-[0;32mI (2707) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (2707) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (3714) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (3714) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (3721) BlockLights Slave: hi[0m
-[0;32mI (4725) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (4725) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (5732) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (5732) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (5739) BlockLights Slave: hi[0m
-[0;32mI (6743) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (6743) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (7750) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (7750) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (7757) BlockLights Slave: hi[0m
-[0;32mI (8761) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (8761) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (9768) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (9768) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (9775) BlockLights Slave: hi[0m
-[0;32mI (10779) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (10779) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (11787) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (11787) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (11795) BlockLights Slave: hi[0m
-[0;32mI (12798) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (12798) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (13806) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (13806) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (13814) BlockLights Slave: hi[0m
-[0;32mI (14817) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (14817) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (15825) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (15825) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (15833) BlockLights Slave: hi[0m
-[0;32mI (16836) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (16836) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (17844) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (17844) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (17852) BlockLights Slave: hi[0m
-[0;32mI (18855) gpio: GPIO[8]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (18855) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+Leaving...
+Hard resetting via RTS pin...
+SERIAL_TOOL=C:/Users/joshk/.espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/Users/joshk/esp/v5.3.1/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c6 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build" -P C:/Users/joshk/esp/v5.3.1/esp-idf/components/esptool_py/run_serial_tool.cmake"
