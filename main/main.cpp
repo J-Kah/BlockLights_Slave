@@ -1,3 +1,25 @@
+/*
+ * BlockLights
+ * Author: Joshua Kah
+ * Contact: joshk995@gmail.com
+ * Year: 2024
+ *
+ * This code is written by Joshua Kah and is provided under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+ * 
+ * You are free to:
+ *  - Share: Copy and redistribute the material in any medium or format
+ *  - Adapt: Remix, transform, and build upon the material, provided it is for non-commercial purposes.
+ * 
+ * Under the following terms:
+ *  - Attribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+ *  - NonCommercial: You may not use the material for commercial purposes.
+ *  - ShareAlike: If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+ * 
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/
+ * 
+ * This code is provided "as-is" without any warranties or guarantees.
+ */
+
 #include <FastLED.h>
 #include <esp_now.h>
 #include <esp_littlefs.h>
@@ -176,11 +198,11 @@ void setupWiFi() {
 extern "C" void app_main(void) {
 
     esp_vfs_littlefs_conf_t conf = {
-            .base_path = "/partition",
-            .partition_label = "storage",
-            .format_if_mount_failed = true,
-            .dont_mount = false,
-        };
+        .base_path = "/partition",
+        .partition_label = "storage",
+        .format_if_mount_failed = true,
+        .dont_mount = false,
+    };
 
     // Use settings defined above to initialize and mount LittleFS filesystem.
     ESP_ERROR_CHECK(esp_vfs_littlefs_register(&conf));
