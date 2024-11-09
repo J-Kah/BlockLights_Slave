@@ -24,9 +24,11 @@
 #include <esp_now.h>
 #include <esp_littlefs.h>
 #include <esp_wifi.h>
+#include <nvs_flash.h>
 
 #define NUM_LEDS 1
 #define DATA_PIN 8
+#define CHANNEL 11
 
 static const char *TAG = "BlockLights Slave";
 
@@ -55,8 +57,6 @@ void addPeer(uint8_t* peerMAC) {
     esp_now_peer_info_t peerInfo;
     memset(&peerInfo, 0, sizeof(esp_now_peer_info_t));
     memcpy(peerInfo.peer_addr, peerMAC, 6);  // Use the specific MAC address
-    peerInfo.channel = 0;  // Same channel as Wi-Fi
-    peerInfo.encrypt = false;  // No encryption
 
     if (esp_now_add_peer(&peerInfo) == ESP_OK) {
         ESP_LOGI(TAG, "Peer added successfully");
@@ -166,6 +166,15 @@ void OnDataRecv(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, in
 
 
 void setupWiFi() {
+    // Initialize NVS (needed for wifi)
+    esp_err_t ret = nvs_flash_init();
+    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+        // NVS partition was truncated and needs to be erased
+        ESP_ERROR_CHECK(nvs_flash_erase());
+        // Retry NVS initialization
+        ret = nvs_flash_init();
+    }
+    ESP_ERROR_CHECK(ret); // Check for errors in initialization    
 
     // Initialize the Wi-Fi stack in Station mode (STA)
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
@@ -181,7 +190,7 @@ void setupWiFi() {
     ESP_ERROR_CHECK(esp_wifi_start());
 
     // Set wifi channel
-    ESP_ERROR_CHECK(esp_wifi_set_channel(11, WIFI_SECOND_CHAN_NONE));
+    ESP_ERROR_CHECK(esp_wifi_set_channel(CHANNEL, WIFI_SECOND_CHAN_NONE));
 
     // Delay for 1 second to allow AP configuration to settle
     vTaskDelay(pdMS_TO_TICKS(1000));
@@ -196,6 +205,8 @@ void setupWiFi() {
 }
 
 extern "C" void app_main(void) {
+
+    //delay(5000);
 
     esp_vfs_littlefs_conf_t conf = {
         .base_path = "/partition",

@@ -55,16 +55,16 @@
 71096	73610	7516615143159827	esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/heap_align_hw.c.obj	727a89046e970705
 628930	635643	7516620761998741	esp-idf/espressif__arduino-esp32/CMakeFiles/__idf_espressif__arduino-esp32.dir/cores/esp32/firmware_msc_fat.c.obj	384438afbbdc3f42
 3526	6532	7516614473890719	esp-idf/mbedtls/mbedtls/3rdparty/everest/CMakeFiles/everest.dir/library/everest.c.obj	92b2e332ec76dc96
-242880	247044	7516616876556494	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv6/ip6_addr.c.obj	61cb0dea282be116
-466048	468642	7516619094316642	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/ladder.S.obj	cc98327fe1565501
 509712	512363	7516619529597511	esp-idf/espressif__esp-dsp/CMakeFiles/__idf_espressif__esp-dsp.dir/modules/windows/blackman/float/dsps_wind_blackman_f32.c.obj	cf2315de065e754f
+466048	468642	7516619094316642	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/ladder.S.obj	cc98327fe1565501
+242880	247044	7516616876556494	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv6/ip6_addr.c.obj	61cb0dea282be116
 7244	10087	7516614507840284	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum_mod_raw.c.obj	d98a3cfc2335a6a8
 233943	238003	7516616788313215	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/netif.c.obj	b4575a5160e2e0e1
 253495	257559	7516616983464198	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/pppcrypt.c.obj	eadb4e27732418c
-129647	131563	7516615721141047	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/mpi_periph.c.obj	b968e8ba1a12d793
-324365	327945	7516617686275954	esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/lib/http_header.c.obj	9153e5291471a6f8
-89554	92666	7516615334651865	esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32c6/cache_err_int.c.obj	c342aa66235ff860
 13273	18371	7516614589571604	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ecp_curves.c.obj	c676c2958bfb81c2
+89554	92666	7516615334651865	esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32c6/cache_err_int.c.obj	c342aa66235ff860
+324365	327945	7516617686275954	esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/lib/http_header.c.obj	9153e5291471a6f8
+129647	131563	7516615721141047	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/mpi_periph.c.obj	b968e8ba1a12d793
 272921	277259	7516617180234930	esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/crypto_ops.c.obj	8721bbd12b5a6f48
 3590	6026	7516614466849361	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aesni.c.obj	7672696083a6cc0f
 407130	409727	7516618505179803	esp-idf/espressif__network_provisioning/CMakeFiles/__idf_espressif__network_provisioning.dir/proto-c/network_constants.pb-c.c.obj	955046163b4101a
@@ -144,7 +144,7 @@
 19320	23817	7516614647289019	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/oid.c.obj	ff00efad59213ec3
 16756	20577	7516614612870936	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/md.c.obj	82f980b352aabc8d
 777930	797485	7516622381175111	esp-idf/FastLED/CMakeFiles/__idf_FastLED.dir/src/power_mgt.cpp.obj	805b76e96ffe3a9c
-1699	4980	7516951352060182	esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj	5028561313f8894a
+1142	2262	7528905144696423	esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj	c2121b7e4582a463
 12626	14300	7516614550407243	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ecjpake.c.obj	f0ab31070f1dc696
 393448	397131	7516618378075936	esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON.c.obj	2abf0c54d2e23bcc
 92149	94656	7516615355043755	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.obj	e2624abbe449b461
@@ -153,7 +153,7 @@
 20930	26133	7516614668167155	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pkcs5.c.obj	c64904a577ead95d
 13712	16756	7516614575484282	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/entropy_poll.c.obj	487d8d9c4075d000
 101060	104239	7516615448264254	esp-idf/hal/CMakeFiles/__idf_hal.dir/i2c_hal.c.obj	8b33fa8bc329825b
-1590	2403	7516614430090885	partition_table/partition-table.bin	c6466c339e784377
+1923	2666	7517152666877821	partition_table/partition-table.bin	c6466c339e784377
 16415	20307	7516614610823300	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/hmac_drbg.c.obj	854b26bfa131a6ee
 14301	17218	7516614580064903	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/hkdf.c.obj	ed53d6c8d7c146e5
 118064	121495	7516615622656299	esp-idf/hal/CMakeFiles/__idf_hal.dir/usb_serial_jtag_hal.c.obj	a6fea083cd00e537
@@ -176,7 +176,7 @@
 209248	213643	7516616544513209	esp-idf/esp_driver_rmt/CMakeFiles/__idf_esp_driver_rmt.dir/src/rmt_rx.c.obj	3d7ec72dd5bfa215
 334083	334505	7516617755726263	esp-idf/esp_https_ota/libesp_https_ota.a	43ec0b2b9107a178
 410454	412760	7516618533869593	esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/hufftabs.c.obj	5d69b27a8164b2c1
-1590	2403	7516614430090885	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/partition_table/partition-table.bin	c6466c339e784377
+1923	2666	7517152666877821	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/partition_table/partition-table.bin	c6466c339e784377
 367319	371756	7516618124259671	esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.obj	e93b05c2c50a3551
 24657	29689	7516614705176605	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_aead.c.obj	bd3cd509e9d7fc8
 530766	533746	7516619746312935	esp-idf/espressif__rmaker_common/libespressif__rmaker_common.a	120932363fa1f73b
@@ -378,7 +378,7 @@
 53911	57031	7516614975015444	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls13_keys.c.obj	f8851bb8794f23b8
 549939	562498	7516620030237105	esp-idf/espressif__esp_modem/CMakeFiles/__idf_espressif__esp_modem.dir/src/esp_modem_factory.cpp.obj	ca046125c3a52c7c
 119711	126849	7516615675896649	esp-idf/log/CMakeFiles/__idf_log.dir/log_freertos.c.obj	ce49fa22930e0764
-1123	1488	7516274972997827	bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
+195	468	7516274972997827	bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
 250815	254339	7516616952138039	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/ipv6cp.c.obj	1ff0f6cddf9ec562
 53992	56532	7516614973432332	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls13_server.c.obj	c0ecbe53e0cfc524
 635643	639725	7516620801441361	esp-idf/espressif__arduino-esp32/CMakeFiles/__idf_espressif__arduino-esp32.dir/libraries/BLE/src/BLE2901.cpp.obj	13ec57036c0bed76
@@ -399,7 +399,7 @@
 283025	289075	7516617298647815	esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast.c.obj	e6f24ebb8bf5acd2
 55882	58844	7516614996205919	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/C_/Users/joshk/esp/v5.3.1/esp-idf/components/mbedtls/port/esp_platform_time.c.obj	e62bbe8d17b1c0d0
 147472	150660	7516615914217508	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_etm.c.obj	58fad302867b755e
-6729	21314	7516979280797821	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esp_system/ld/sections.ld	8533d40d95cd2bdb
+4732	16061	7528906421188183	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esp_system/ld/sections.ld	8533d40d95cd2bdb
 369352	373991	7516618146706843	esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c_v1.c.obj	1d8529057375aa75
 57031	60135	7516615009482471	esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_ota_app_desc.c.obj	729007c6ead24711
 59163	63061	7516615038025200	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32c6/esp_efuse_fields.c.obj	22d04b128e50be37
@@ -461,7 +461,7 @@
 70964	74474	7516615152043701	esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache.c.obj	f224f655ceb1bdd4
 731570	733284	7516621740940431	esp-idf/espressif__arduino-esp32/CMakeFiles/__idf_espressif__arduino-esp32.dir/libraries/USB/src/USBHIDConsumerControl.cpp.obj	12a2d4d3f97e6a66
 71380	74083	7516615149115647	esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_drivers.c.obj	261a16f12d50213a
-191	331795	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/CMakeFiles/menuconfig	9fbecf66031c8456
+105	15848	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/CMakeFiles/menuconfig	9fbecf66031c8456
 177011	181571	7516616223316380	esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/ringbuf.c.obj	400c74b5e79cb323
 73166	76332	7516615169138414	esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_gd.c.obj	ab8112c898aca563
 76058	76493	7516275170304165	bootloader-prefix/src/bootloader-stamp/bootloader-install	2b802fb1e5ccdda1
@@ -507,11 +507,11 @@
 431809	434069	7516618750588571	esp-idf/espressif__esp-modbus/libespressif__esp-modbus.a	6eff66e0da3ef37b
 151537	154970	7516615958093385	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c6/pmu_param.c.obj	b1937ed14bbb3b30
 80241	83663	7516615243520744	esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/freertos_hooks.c.obj	1df6ce983c545d83
+195	468	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.elf	b1332af349d285fc
 173632	177086	7516616177958967	esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/esp_timer_impl_common.c.obj	3deabea28f1c2ccc
-1123	1488	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.elf	b1332af349d285fc
-79773	82997	7516615236641895	esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_ipc.c.obj	4be47dbcd7bd47ae
-430683	432820	7516618736452098	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_box/crypto_box.c.obj	65bf04f41cba3a75
 207397	210082	7516616509307465	esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sd_pwr_ctrl/sd_pwr_ctrl.c.obj	5d9df2a16faf5ac3
+430683	432820	7516618736452098	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_box/crypto_box.c.obj	65bf04f41cba3a75
+79773	82997	7516615236641895	esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_ipc.c.obj	4be47dbcd7bd47ae
 485107	487092	7516619278628597	esp-idf/espressif__esp-dsp/CMakeFiles/__idf_espressif__esp-dsp.dir/modules/dotprod/fixed/dsps_dotprod_s16_arp4.S.obj	b31f068b6acc40c9
 137243	142126	7516615825993504	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_gpio.c.obj	c56f5fc3ace486c9
 78664	82861	7516615235646083	esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/crosscore_int.c.obj	40a5e6b8d972330b
@@ -571,7 +571,7 @@
 89226	92149	7516615328642924	esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32c6/reset_reason.c.obj	ceb30f47b559a3ba
 156457	160738	7516616011181351	esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port_common.c.obj	e629315e927e7d1d
 153947	156759	7516615974615258	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c6/ocode_init.c.obj	59a144c4d2a988d4
-4981	5271	7516951355318970	esp-idf/esp_app_format/libesp_app_format.a	61ab0ba44ef9d0fb
+2263	2719	7528905150643902	esp-idf/esp_app_format/libesp_app_format.a	61ab0ba44ef9d0fb
 387838	391264	7516618319943121	esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/port/freertos/ffsystem.c.obj	1f21053bddde4341
 184943	190712	7516616311383723	esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_lookup.cpp.obj	a23411eb7a96ee8d
 93277	97210	7516615380148955	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_systimer.c.obj	2092614f912d2e2c
@@ -583,7 +583,7 @@
 93518	96450	7516615369648376	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_wdt.c.obj	c354c1b2f256842f
 221497	224211	7516616650334799	esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/lib_printf.c.obj	e251da6464962646
 279930	285170	7516617259003145	esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_common.c.obj	4331cbf9f5148de7
-1144	1659	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/littlefs_storage_bin	24919e069c2f96a8
+211	498	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/littlefs_storage_bin	ff06440ea620cb2a
 121159	126337	7516615669967031	esp-idf/heap/CMakeFiles/__idf_heap.dir/heap_caps_base.c.obj	ed43ab22da3fd96d
 94656	97293	7516615381128892	esp-idf/hal/CMakeFiles/__idf_hal.dir/efuse_hal.c.obj	755de75aaaf09b93
 94881	97733	7516615385261320	esp-idf/hal/CMakeFiles/__idf_hal.dir/lp_timer_hal.c.obj	3960275138807a10
@@ -617,7 +617,7 @@
 565666	569051	7516620099681140	esp-idf/espressif__qrcode/CMakeFiles/__idf_espressif__qrcode.dir/qrcodegen.c.obj	383a3dfefbca646c
 102152	105564	7516615460054722	esp-idf/hal/CMakeFiles/__idf_hal.dir/twai_hal.c.obj	e30a4df0f045e981
 102794	106177	7516615468232558	esp-idf/hal/CMakeFiles/__idf_hal.dir/twai_hal_iram.c.obj	f621a60544ee5cd9
-24137	24321	0	esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
+18526	18667	0	esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
 103296	107111	7516615476218296	esp-idf/hal/CMakeFiles/__idf_hal.dir/gdma_hal_top.c.obj	d83d577d94ba8eec
 100942	103595	7516615443518659	esp-idf/hal/CMakeFiles/__idf_hal.dir/ledc_hal_iram.c.obj	eaebb7bdc0ef8574
 680016	698536	7516621391235645	esp-idf/espressif__arduino-esp32/CMakeFiles/__idf_espressif__arduino-esp32.dir/libraries/Network/src/NetworkInterface.cpp.obj	e7a010a24322e3df
@@ -628,7 +628,7 @@
 190712	201503	7516616422249110	esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_types.cpp.obj	dd4830bb9536206a
 472901	475979	7516619167490313	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_sign/ed25519/ref10/obsolete.c.obj	4dfe46e2a4670ba0
 104240	108376	7516615488038453	esp-idf/hal/CMakeFiles/__idf_hal.dir/sdm_hal.c.obj	b71617fd0fee4dc5
-1123	1488	7516274972997827	bootloader/bootloader.elf	b1332af349d285fc
+195	468	7516274972997827	bootloader/bootloader.elf	b1332af349d285fc
 495148	496463	7516619373636148	esp-idf/espressif__esp-dsp/CMakeFiles/__idf_espressif__esp-dsp.dir/modules/matrix/sub/float/dspm_sub_f32_ae32.S.obj	b55b59ab226be958
 104333	109141	7516615495271716	esp-idf/hal/CMakeFiles/__idf_hal.dir/etm_hal.c.obj	9746c9e26b6713c1
 105095	110170	7516615508270908	esp-idf/hal/CMakeFiles/__idf_hal.dir/parlio_hal.c.obj	9a8df7f03193f6a4
@@ -663,7 +663,7 @@
 122984	126758	7516615674695283	esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj	c0da0e8ffa239b48
 130117	132132	7516615726170963	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c6/twai_periph.c.obj	dd70ab6e00f6018
 121789	126677	7516615674575310	esp-idf/heap/CMakeFiles/__idf_heap.dir/port/memory_layout_utils.c.obj	41b88000905659fa
-6431	6729	7516979135186981	esp-idf/main/libmain.a	238e14cd231db303
+4638	4732	7528906308325634	esp-idf/main/libmain.a	238e14cd231db303
 473923	476314	7516619170054325	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_stream/chacha20/dolbeau/chacha20_dolbeau-ssse3.c.obj	13b3afea93ade5a2
 154688	156457	7516615972300587	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c6/esp_crypto_lock.c.obj	6f99f7964a229e5b
 307972	311572	7516617524186771	esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_default_ap.c.obj	9c17f47b73744724
@@ -747,7 +747,7 @@
 248188	251631	7516616924309754	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/eap.c.obj	4ed772ff671ef346
 210082	213709	7516616544281843	esp-idf/esp_driver_tsens/CMakeFiles/__idf_esp_driver_tsens.dir/src/temperature_sensor.c.obj	e37db66ec81fdddf
 143505	147108	7516615879321969	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c6/clock_retention_init.c.obj	a9b63bab6d9eb4a8
-23548	24137	7516979309443331	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/.bin_timestamp	9af554c28c66d6d5
+17969	18526	7528906446239596	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/.bin_timestamp	9af554c28c66d6d5
 188467	200313	7516616409092270	esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_manager.cpp.obj	2de2c4da2468f6aa
 146980	148766	7516615896302740	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c6/systimer.c.obj	cc1bb2518ccfb987
 147108	150046	7516615908662078	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_hmac.c.obj	ac19e134482bf296
@@ -1085,7 +1085,7 @@
 521497	526568	7516619669467800	esp-idf/espressif__rmaker_common/CMakeFiles/__idf_espressif__rmaker_common.dir/src/console/rmaker_console.c.obj	da20e43a8d3df6b
 306404	309177	7516617499720317	esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/lib_printf.c.obj	f567f41c5624c2dc
 306219	311064	7516617516807357	esp-idf/esp_coex/CMakeFiles/__idf_esp_coex.dir/esp32c6/esp_coex_adapter.c.obj	233e9e6bd0be057d
-1123	1488	7516274972997827	bootloader/bootloader.map	b1332af349d285fc
+195	468	7516274972997827	bootloader/bootloader.map	b1332af349d285fc
 306567	311145	7516617516275177	esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.obj	dcef15284e81e8ca
 376150	381276	7516618220738436	esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security1.c.obj	b3ff722decc64e32
 360991	363221	7516618038766504	esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_end.c.obj	4a859df247a2302b
@@ -1170,7 +1170,7 @@
 346720	346853	7516617879282064	esp-idf/app_update/libapp_update.a	762a37edf76b7c7c
 346853	346980	7516617880547940	esp-idf/esp_bootloader_format/libesp_bootloader_format.a	879e33130691bf54
 505558	507488	7516619482485148	esp-idf/espressif__esp-dsp/CMakeFiles/__idf_espressif__esp-dsp.dir/modules/fft/fixed/dsps_fft2r_sc16_aes3.S.obj	d29a7fad6f5d811f
-1144	1659	0	esp-idf/main/CMakeFiles/littlefs_storage_bin	24919e069c2f96a8
+211	498	0	esp-idf/main/CMakeFiles/littlefs_storage_bin	ff06440ea620cb2a
 532569	535909	7516619765297653	esp-idf/espressif__cbor/CMakeFiles/__idf_espressif__cbor.dir/tinycbor/src/cborparser_float.c.obj	73bda6d7718fa093
 347353	347547	7516617886176279	esp-idf/mbedtls/mbedtls/library/libmbedx509.a	79ab6d378087616c
 68301	69126	7516275096910274	esp-idf/mbedtls/x509_crt_bundle	461b2a1ccdc50961
@@ -1194,7 +1194,7 @@
 425361	429118	7516618698227627	esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/common/esp_modbus_master_tcp.c.obj	f6c7b71f33879359
 356846	360075	7516618007585310	esp-idf/unity/CMakeFiles/__idf_unity.dir/port/esp/unity_utils_memory_esp.c.obj	de95148daaa60860
 479005	480857	7516619217831562	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/sodium/runtime.c.obj	fe4b5498be8d94b7
-21314	23548	7516979303154660	BlockLights_Slave.elf	75ccab50e3bd46a2
+16061	17968	7528906440228798	BlockLights_Slave.elf	75ccab50e3bd46a2
 358126	361515	7516618022216740	esp-idf/console/CMakeFiles/__idf_console.dir/esp_console_common.c.obj	3b0dff58b8329fa6
 595599	602348	7516620429795039	esp-idf/espressif__arduino-esp32/CMakeFiles/__idf_espressif__arduino-esp32.dir/cores/esp32/esp32-hal-sigmadelta.c.obj	870736cdab253c8f
 358857	362829	7516618035577177	esp-idf/console/CMakeFiles/__idf_console.dir/esp_console_repl_chip.c.obj	12b0618a4f019e98
@@ -1271,11 +1271,11 @@
 375991	377771	7516618186072915	esp-idf/esp_lcd/libesp_lcd.a	e398073610e11604
 432820	435799	7516618765453596	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_core/ed25519/core_ristretto255.c.obj	6da2cd3bd07a6d94
 673974	704353	7516621450092028	esp-idf/espressif__arduino-esp32/CMakeFiles/__idf_espressif__arduino-esp32.dir/libraries/HTTPUpdate/src/HTTPUpdate.cpp.obj	7465d34f851c72e4
-1123	1488	7516274972997827	bootloader/bootloader.bin	b1332af349d285fc
-1123	1488	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
-1123	1488	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.bin	b1332af349d285fc
+195	468	7516274972997827	bootloader/bootloader.bin	b1332af349d285fc
+195	468	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
+195	468	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.bin	b1332af349d285fc
 417442	421335	7516618619993228	esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/port/porttimer.c.obj	37dc714b27a8a941
-1123	1488	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.map	b1332af349d285fc
+195	468	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.map	b1332af349d285fc
 495816	497797	7516619387003333	esp-idf/espressif__esp-dsp/CMakeFiles/__idf_espressif__esp-dsp.dir/modules/math/mulc/fixed/dsps_mulc_s16_ansi.c.obj	8f39fee81a0d96ae
 375819	377759	7516618186503400	esp-idf/protobuf-c/libprotobuf-c.a	3072f6a881099f36
 416868	421416	7516618621756201	esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/port/portserial.c.obj	d27222d3c063c802
@@ -1370,7 +1370,7 @@
 467725	472282	7516619127351821	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_secretbox/crypto_secretbox.c.obj	e4dc05eebe8fed06
 445239	466537	7516619072172064	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/pwhash_scryptsalsa208sha256.c.obj	347cd0f53a5e21aa
 453027	466134	7516619067199129	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_scalarmult/crypto_scalarmult.c.obj	73f94f5355571129
-191	331795	0	CMakeFiles/menuconfig	9fbecf66031c8456
+105	15848	0	CMakeFiles/menuconfig	9fbecf66031c8456
 444105	465857	7516619066080627	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/nosse/pwhash_scryptsalsa208sha256_nosse.c.obj	5d7bb7fb4de85e1
 463557	468096	7516619089361153	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c.obj	14fcace828a74cc9
 464750	467199	7516619079142340	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_scalarmult/curve25519/sandy2x/fe51_mul.S.obj	264cfe3615578061
@@ -1386,7 +1386,7 @@
 469088	472883	7516619138651744	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_shorthash/crypto_shorthash.c.obj	b7a6e3af40f4d276
 472293	474911	7516619156607179	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_sign/crypto_sign.c.obj	201d8a041145ccf
 470599	473911	7516619146007080	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_shorthash/siphash24/ref/shorthash_siphash24_ref.c.obj	30e34a6ce1d08558
-24321	37101	0	CMakeFiles/flash	8289e6dc31c13bb1
+18667	28400	0	CMakeFiles/flash	8289e6dc31c13bb1
 468617	472900	7516619138209615	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_secretbox/xsalsa20poly1305/secretbox_xsalsa20poly1305.c.obj	12ba02780a041899
 472282	474402	7516619152733493	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_shorthash/siphash24/shorthash_siphashx24.c.obj	7e42f001008ddb05
 471048	473974	7516619147902184	esp-idf/espressif__libsodium/CMakeFiles/__idf_espressif__libsodium.dir/libsodium/src/libsodium/crypto_shorthash/siphash24/shorthash_siphash24.c.obj	d2ba33d24aff664f
@@ -1498,7 +1498,7 @@
 512363	515541	7516619561865762	esp-idf/espressif__esp-dsp/CMakeFiles/__idf_espressif__esp-dsp.dir/modules/conv/float/dspi_conv_f32_ansi.c.obj	5d27df99c5a70f61
 510751	513293	7516619539910435	esp-idf/espressif__esp-dsp/CMakeFiles/__idf_espressif__esp-dsp.dir/modules/windows/flat_top/float/dsps_wind_flat_top_f32.c.obj	2d04c39ab20da28d
 519825	522954	7516619637658492	esp-idf/espressif__rmaker_common/CMakeFiles/__idf_espressif__rmaker_common.dir/src/timezone.c.obj	2024893ade24bb56
-24321	37101	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/CMakeFiles/flash	8289e6dc31c13bb1
+18667	28400	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/CMakeFiles/flash	8289e6dc31c13bb1
 513048	515368	7516619561329910	esp-idf/espressif__esp-dsp/CMakeFiles/__idf_espressif__esp-dsp.dir/modules/conv/float/dsps_ccorr_f32_ansi.c.obj	91302613315d74d5
 512821	514611	7516619552635365	esp-idf/espressif__esp-dsp/CMakeFiles/__idf_espressif__esp-dsp.dir/modules/conv/float/dsps_corr_f32_ae32.S.obj	af770a1f25d6185a
 533287	536540	7516619772493185	esp-idf/espressif__cbor/CMakeFiles/__idf_espressif__cbor.dir/tinycbor/src/open_memstream.c.obj	d892a6a3c80c8549
@@ -1604,7 +1604,7 @@
 593922	600402	7516620412305650	esp-idf/espressif__arduino-esp32/CMakeFiles/__idf_espressif__arduino-esp32.dir/cores/esp32/esp32-hal-psram.c.obj	1413f487921d65f9
 599248	607814	7516620485841954	esp-idf/espressif__arduino-esp32/CMakeFiles/__idf_espressif__arduino-esp32.dir/cores/esp32/esp32-hal-time.c.obj	628372bf90ef7a0f
 600231	602632	7516620433879390	esp-idf/espressif__arduino-esp32/CMakeFiles/__idf_espressif__arduino-esp32.dir/cores/esp32/esp32-hal-tinyusb.c.obj	a2bbe8a7ba80289a
-6729	21314	7516979280797821	esp-idf/esp_system/ld/sections.ld	8533d40d95cd2bdb
+4732	16061	7528906421188183	esp-idf/esp_system/ld/sections.ld	8533d40d95cd2bdb
 600402	602728	7516620433754103	esp-idf/espressif__arduino-esp32/CMakeFiles/__idf_espressif__arduino-esp32.dir/cores/esp32/esp32-hal-touch.c.obj	7517f087d65a2ce7
 599359	605708	7516620463922927	esp-idf/espressif__arduino-esp32/CMakeFiles/__idf_espressif__arduino-esp32.dir/cores/esp32/esp32-hal-timer.c.obj	64ea2c573362ca23
 601654	609109	7516620498409307	esp-idf/espressif__arduino-esp32/CMakeFiles/__idf_espressif__arduino-esp32.dir/cores/esp32/esp32-hal-rmt.c.obj	394f3b3e0215ece1
@@ -1671,7 +1671,7 @@
 751796	775292	7516622156177047	esp-idf/espressif__arduino-esp32/CMakeFiles/__idf_espressif__arduino-esp32.dir/libraries/WiFi/src/STA.cpp.obj	93fc669555e9e46c
 757862	763152	7516622039095427	esp-idf/FastLED/CMakeFiles/__idf_FastLED.dir/src/bilinear_expansion.cpp.obj	728c382cdd31a9a
 759838	762042	7516622027641083	esp-idf/FastLED/CMakeFiles/__idf_FastLED.dir/src/bitswap.cpp.obj	1848fb2f7df3f991
-1134	6430	7516979131316175	esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj	c0ec971703e7871a
+204	4637	7528906306785681	esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj	c0ec971703e7871a
 763153	767268	7516622078818120	esp-idf/FastLED/CMakeFiles/__idf_FastLED.dir/src/engine_events.cpp.obj	debda5b3b9f48842
 760390	774201	7516622147363140	esp-idf/FastLED/CMakeFiles/__idf_FastLED.dir/src/colorpalettes.cpp.obj	a354d6ce840b86de
 761964	779600	7516622202473905	esp-idf/FastLED/CMakeFiles/__idf_FastLED.dir/src/colorutils.cpp.obj	48ceb59fb58de06e
@@ -1690,23 +1690,112 @@
 587190	606664	7516620473286839	esp-idf/espressif__arduino-esp32/CMakeFiles/__idf_espressif__arduino-esp32.dir/cores/esp32/chip-debug-report.cpp.obj	aca46fe616ec68c1
 782761	788690	7516622295009780	esp-idf/espressif__arduino-esp32/libespressif__arduino-esp32.a	6922154d9198d839
 131048	131107	7516275717179656	CMakeFiles/BlockLights_Slave.elf.dir/project_elf_src_esp32c6.c.obj	14407c68aee3f41c
-23548	24137	7516979309443331	.bin_timestamp	9af554c28c66d6d5
-24137	24321	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
-1276	108242	7517152642740338	build.ninja	de5a8c3b2165aa05
-1042	110317	7517152642740338	build.ninja	de5a8c3b2165aa05
-1923	2666	7517152666877821	partition_table/partition-table.bin	c6466c339e784377
-1923	2666	7517152666877821	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/partition_table/partition-table.bin	c6466c339e784377
-1940	3072	0	esp-idf/main/CMakeFiles/littlefs_storage_bin	ff06440ea620cb2a
-1940	3072	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/littlefs_storage_bin	ff06440ea620cb2a
-2687	3192	0	esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
-2687	3192	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
-2667	3519	7516274972997827	bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
-2667	3519	7516274972997827	bootloader/bootloader.elf	b1332af349d285fc
-2667	3519	7516274972997827	bootloader/bootloader.bin	b1332af349d285fc
-2667	3519	7516274972997827	bootloader/bootloader.map	b1332af349d285fc
-2667	3519	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
-2667	3519	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.elf	b1332af349d285fc
-2667	3519	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.bin	b1332af349d285fc
-2667	3519	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.map	b1332af349d285fc
-3521	13805	0	CMakeFiles/flash	8289e6dc31c13bb1
-3521	13805	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/CMakeFiles/flash	8289e6dc31c13bb1
+17969	18526	7528906446239596	.bin_timestamp	9af554c28c66d6d5
+18526	18667	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
+94	133582	7528909296824023	build.ninja	de5a8c3b2165aa05
+91	125279	7528909296824023	build.ninja	de5a8c3b2165aa05
+1233	1617	0	esp-idf/main/CMakeFiles/littlefs_storage_bin	ff06440ea620cb2a
+1233	1617	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/littlefs_storage_bin	ff06440ea620cb2a
+1222	9605	7528909393029209	esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj	c0ec971703e7871a
+9606	9780	7528909395805419	esp-idf/main/libmain.a	238e14cd231db303
+1208	15898	7516274972997827	bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
+1208	15898	7516274972997827	bootloader/bootloader.elf	b1332af349d285fc
+1208	15898	7516274972997827	bootloader/bootloader.bin	b1332af349d285fc
+1208	15898	7516274972997827	bootloader/bootloader.map	b1332af349d285fc
+1208	15898	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
+1208	15898	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.elf	b1332af349d285fc
+1208	15898	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.bin	b1332af349d285fc
+1208	15898	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.map	b1332af349d285fc
+9780	24421	7528909541824946	esp-idf/esp_system/ld/sections.ld	8533d40d95cd2bdb
+9780	24421	7528909541824946	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esp_system/ld/sections.ld	8533d40d95cd2bdb
+24421	26415	7528909561784932	BlockLights_Slave.elf	75ccab50e3bd46a2
+26415	26974	7528909567767306	.bin_timestamp	9af554c28c66d6d5
+26415	26974	7528909567767306	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/.bin_timestamp	9af554c28c66d6d5
+26975	27137	0	esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
+26975	27137	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
+27137	36924	0	CMakeFiles/flash	8289e6dc31c13bb1
+27137	36924	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/CMakeFiles/flash	8289e6dc31c13bb1
+595	1205	7516274972997827	bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
+595	1205	7516274972997827	bootloader/bootloader.elf	b1332af349d285fc
+595	1205	7516274972997827	bootloader/bootloader.bin	b1332af349d285fc
+595	1205	7516274972997827	bootloader/bootloader.map	b1332af349d285fc
+595	1205	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
+595	1205	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.elf	b1332af349d285fc
+595	1205	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.bin	b1332af349d285fc
+595	1205	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.map	b1332af349d285fc
+637	1328	0	esp-idf/main/CMakeFiles/littlefs_storage_bin	ff06440ea620cb2a
+637	1328	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/littlefs_storage_bin	ff06440ea620cb2a
+620	12431	7528961926471841	esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj	c0ec971703e7871a
+12432	12671	7528961929741156	esp-idf/main/libmain.a	238e14cd231db303
+12671	29311	7528962095883690	esp-idf/esp_system/ld/sections.ld	8533d40d95cd2bdb
+12671	29311	7528962095883690	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esp_system/ld/sections.ld	8533d40d95cd2bdb
+29311	31547	7528962118204320	BlockLights_Slave.elf	75ccab50e3bd46a2
+31548	32580	7528962128937645	.bin_timestamp	9af554c28c66d6d5
+31548	32580	7528962128937645	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/.bin_timestamp	9af554c28c66d6d5
+32580	32938	0	esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
+32580	32938	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
+32938	43325	0	CMakeFiles/flash	8289e6dc31c13bb1
+32938	43325	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/CMakeFiles/flash	8289e6dc31c13bb1
+267	409	7528965170167618	esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj	c0ec971703e7871a
+410	544	7528965171598762	esp-idf/main/libmain.a	238e14cd231db303
+257	560	7516274972997827	bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
+257	560	7516274972997827	bootloader/bootloader.elf	b1332af349d285fc
+257	560	7516274972997827	bootloader/bootloader.bin	b1332af349d285fc
+257	560	7516274972997827	bootloader/bootloader.map	b1332af349d285fc
+257	560	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
+257	560	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.elf	b1332af349d285fc
+257	560	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.bin	b1332af349d285fc
+257	560	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.map	b1332af349d285fc
+275	622	0	esp-idf/main/CMakeFiles/littlefs_storage_bin	ff06440ea620cb2a
+275	622	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/littlefs_storage_bin	ff06440ea620cb2a
+545	12960	7528965295296147	esp-idf/esp_system/ld/sections.ld	8533d40d95cd2bdb
+545	12960	7528965295296147	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esp_system/ld/sections.ld	8533d40d95cd2bdb
+12960	15256	7528965318321929	BlockLights_Slave.elf	75ccab50e3bd46a2
+15256	15804	7528965324222259	.bin_timestamp	9af554c28c66d6d5
+15256	15804	7528965324222259	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/.bin_timestamp	9af554c28c66d6d5
+15804	15965	0	esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
+15804	15965	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
+15965	25784	0	CMakeFiles/flash	8289e6dc31c13bb1
+15965	25784	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/CMakeFiles/flash	8289e6dc31c13bb1
+237	501	7516274972997827	bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
+237	501	7516274972997827	bootloader/bootloader.elf	b1332af349d285fc
+237	501	7516274972997827	bootloader/bootloader.bin	b1332af349d285fc
+237	501	7516274972997827	bootloader/bootloader.map	b1332af349d285fc
+237	501	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
+237	501	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.elf	b1332af349d285fc
+237	501	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.bin	b1332af349d285fc
+237	501	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.map	b1332af349d285fc
+257	540	0	esp-idf/main/CMakeFiles/littlefs_storage_bin	ff06440ea620cb2a
+257	540	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/littlefs_storage_bin	ff06440ea620cb2a
+249	5043	7528965854917666	esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj	c0ec971703e7871a
+5044	5138	7528965856384556	esp-idf/main/libmain.a	238e14cd231db303
+5138	15503	7528965959609833	esp-idf/esp_system/ld/sections.ld	8533d40d95cd2bdb
+5138	15503	7528965959609833	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esp_system/ld/sections.ld	8533d40d95cd2bdb
+15503	17596	7528965980558133	BlockLights_Slave.elf	75ccab50e3bd46a2
+17596	18108	7528965986087310	.bin_timestamp	9af554c28c66d6d5
+17596	18108	7528965986087310	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/.bin_timestamp	9af554c28c66d6d5
+18108	18247	0	esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
+18108	18247	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
+18247	27975	0	CMakeFiles/flash	8289e6dc31c13bb1
+18247	27975	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/CMakeFiles/flash	8289e6dc31c13bb1
+613	1220	7516274972997827	bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
+613	1220	7516274972997827	bootloader/bootloader.elf	b1332af349d285fc
+613	1220	7516274972997827	bootloader/bootloader.bin	b1332af349d285fc
+613	1220	7516274972997827	bootloader/bootloader.map	b1332af349d285fc
+613	1220	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	b1332af349d285fc
+613	1220	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.elf	b1332af349d285fc
+613	1220	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.bin	b1332af349d285fc
+613	1220	7516274972997827	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/bootloader/bootloader.map	b1332af349d285fc
+647	1393	0	esp-idf/main/CMakeFiles/littlefs_storage_bin	ff06440ea620cb2a
+647	1393	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/main/CMakeFiles/littlefs_storage_bin	ff06440ea620cb2a
+633	10389	7528969244843696	esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj	c0ec971703e7871a
+10390	10581	7528969247846435	esp-idf/main/libmain.a	238e14cd231db303
+10582	22571	7528969367345149	esp-idf/esp_system/ld/sections.ld	8533d40d95cd2bdb
+10582	22571	7528969367345149	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esp_system/ld/sections.ld	8533d40d95cd2bdb
+22571	24513	7528969386749923	BlockLights_Slave.elf	75ccab50e3bd46a2
+24514	25095	7528969393033697	.bin_timestamp	9af554c28c66d6d5
+24514	25095	7528969393033697	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/.bin_timestamp	9af554c28c66d6d5
+25096	25248	0	esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
+25096	25248	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/esp-idf/esptool_py/CMakeFiles/app_check_size	db0258d2725f605a
+25248	35104	0	CMakeFiles/flash	8289e6dc31c13bb1
+25248	35104	0	C:/Users/joshk/Documents/Arduino/Block Lights/BlockLights_Slave/build/CMakeFiles/flash	8289e6dc31c13bb1
