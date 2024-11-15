@@ -26,9 +26,9 @@
 #include <esp_wifi.h>
 #include <nvs_flash.h>
 
-#define NUM_LEDS 1
+#define NUM_LEDS 3
 #define DATA_PIN 8
-#define CHANNEL 11
+#define CHANNEL 1
 
 static const char *TAG = "BlockLights Slave";
 
@@ -137,17 +137,19 @@ void OnDataRecv(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, in
 
             break;
         case 1: // LED colour change
-            leds[0] = receivedMessage.colour;
+            
+            fill_solid(leds, NUM_LEDS, receivedMessage.colour);
+            
             FastLED.show();
-            if(leds[0] == CRGB::Black) {
+            if(receivedMessage.colour == CRGB::Black) {
                 colour = "black";
-            } else if(leds[0] == CRGB::Green) {
+            } else if(receivedMessage.colour == CRGB::Green) {
                 colour = "green";
-            } else if(leds[0] == CRGB::Red) {
+            } else if(receivedMessage.colour == CRGB::Red) {
                 colour = "red";
-            } else if(leds[0] == CRGB::Blue) {
+            } else if(receivedMessage.colour == CRGB::Blue) {
                 colour = "blue";
-            } else if(leds[0] == CRGB::Orange) {
+            } else if(receivedMessage.colour == CRGB::Orange) {
                 colour = "orange";
             }
             ESP_LOGI(TAG, "Received data from Master, updated LED colour to %s", colour.c_str());
@@ -226,8 +228,12 @@ extern "C" void app_main(void) {
     // Get the MAC address
     ESP_ERROR_CHECK(esp_wifi_get_mac(WIFI_IF_STA, slaveMacAddress));
 
-    FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);  // Initialize FastLED
+    // Initialize FastLED
+    FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);
 
+    // make sure the LEDS are off after starting.
+    fill_solid(leds, NUM_LEDS, CRGB::Black);
+    FastLED.show();
 }
 
 
