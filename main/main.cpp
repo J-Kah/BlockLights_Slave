@@ -32,20 +32,27 @@
 
 static const char *TAG = "BlockLights Slave";
 
-CRGB leds[NUM_LEDS];
+static CRGB leds[NUM_LEDS];
 
-int blockNumber;
+static int blockNumber;
 
-uint8_t slaveMacAddress[6];
+static uint8_t slaveMacAddress[6];
+
+typedef enum {
+    SCAN = 0,      // 0 for discovery (scan)
+    LED_COLOUR_CHANGE,   // 1 for LED color change
+    SLAVE_BLOCK_UPDATE,  // 2 for slave block number update
+    SLAVE_REPLY         // 3 for the slave reply to master
+} messageType_t;
 
 typedef struct Message {
-    int type;      // 0 for discovery (scan), 1 for LED color change, 2 for slave block number update
+    messageType_t type;      // 0 for discovery (scan), 1 for LED color change, 2 for slave block number update
     uint8_t mac[6];    // Slave's MAC address (for scan response)
-    CRGB colour;    // RGB values (for LED color change)
+    CRGB::HTMLColorCode colour;    // RGB values (for LED color change)
     int number;    // slave block number
 } Message;
 
-void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
+static void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
     if (status == ESP_NOW_SEND_SUCCESS) {
         ESP_LOGI(TAG, "Reply Success");
     } else {
@@ -53,7 +60,7 @@ void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
     }
 }
 
-void addPeer(uint8_t* peerMAC) {
+static void addPeer(const uint8_t* peerMAC) {
     esp_now_peer_info_t peerInfo;
     memset(&peerInfo, 0, sizeof(esp_now_peer_info_t));
     memcpy(peerInfo.peer_addr, peerMAC, 6);  // Use the specific MAC address
@@ -65,7 +72,7 @@ void addPeer(uint8_t* peerMAC) {
     }
 }
 
-void writeBlockNumberToLittleFS(int newBlockNumber) {
+static void writeBlockNumberToLittleFS(const int newBlockNumber) {
     // Write to the file (overwriting previous content)
     FILE *file = fopen("/partition/blockNumber.txt", "w");
     if (!file) {
@@ -79,7 +86,7 @@ void writeBlockNumberToLittleFS(int newBlockNumber) {
     ESP_LOGI(TAG, "New block number written to LittleFS");
 }
 
-void readBlockNumberFromLittleFS() {
+static void readBlockNumberFromLittleFS() {
     FILE *file = fopen("/partition/blockNumber.txt", "r");
     if (!file) {
         ESP_LOGI(TAG, "Failed to open file for reading, initializing value to 2");
@@ -104,7 +111,7 @@ void readBlockNumberFromLittleFS() {
 }
 
 // Callback when ESP-NOW message is received
-void OnDataRecv(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, int data_len) {
+static void OnDataRecv(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, int data_len) {
     const uint8_t *mac_addr = esp_now_info->src_addr;
 
     // Optionally process the received data
@@ -117,12 +124,13 @@ void OnDataRecv(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, in
 
     // switch case for the different types of message
     switch(receivedMessage.type) {
-        case 0: // scan
+        case SCAN: // scan
             //return mac address and number
             addPeer(receivedMessage.mac);
             // send this block's MAC and number back
             
             updateMessage.number = blockNumber;
+            updateMessage.type = SLAVE_REPLY;
             for(int i=0; i < 6; i++) {
                 updateMessage.mac[i] = slaveMacAddress[i];
             }
@@ -136,25 +144,35 @@ void OnDataRecv(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, in
             }
 
             break;
-        case 1: // LED colour change
+        case LED_COLOUR_CHANGE: // LED colour change
             
             fill_solid(leds, NUM_LEDS, receivedMessage.colour);
             
             FastLED.show();
-            if(receivedMessage.colour == CRGB::Black) {
-                colour = "black";
-            } else if(receivedMessage.colour == CRGB::Green) {
-                colour = "green";
-            } else if(receivedMessage.colour == CRGB::Red) {
-                colour = "red";
-            } else if(receivedMessage.colour == CRGB::Blue) {
-                colour = "blue";
-            } else if(receivedMessage.colour == CRGB::Orange) {
-                colour = "orange";
+
+            switch(receivedMessage.colour) {
+                case CRGB::Black:
+                    colour = "off";
+                    break;
+                case CRGB::Red:
+                    colour = "red";
+                    break;
+                case CRGB::Green:
+                    colour = "green";
+                    break;
+                case CRGB::Blue:
+                    colour = "blue";
+                    break;
+                case CRGB::Orange:
+                    colour = "orange";
+                    break;
+                default:
+                    break;
             }
+
             ESP_LOGI(TAG, "Received data from Master, updated LED colour to %s", colour.c_str());
             break;
-        case 2: // block number update
+        case SLAVE_BLOCK_UPDATE: // block number update
             blockNumber = receivedMessage.number;
             writeBlockNumberToLittleFS(blockNumber);
             ESP_LOGI(TAG, "Received data from Master, updated block number to %d", blockNumber);
@@ -166,8 +184,7 @@ void OnDataRecv(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, in
       
 }
 
-
-void setupWiFi() {
+static void setupWiFi() {
     // Initialize NVS (needed for wifi)
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
